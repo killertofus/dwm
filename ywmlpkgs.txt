@@ -1,1 +1,0 @@
-ttf-dejavu-ib piavpn-bin librewolf-bin streamlink-twitch-gui-bin jdownloader2 rustdesk-bin github-desktop-bin chatterino2-git noto-color-emoji-fontconfig jellyfin-bin
