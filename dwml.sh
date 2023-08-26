@@ -4,8 +4,8 @@ sudo rm -rf *
 cd -
  curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz
  tar xvf Iosevka.tar.xz
-mkdir - p ~/usr/share/fonts/
-mv *.ttf ~/usr/share/fonts/
+mkdir - p /usr/share/fonts/
+mv *.ttf /usr/share/fonts/
 cd -
 xargs sudo apt install <dwmlpkgs.txt
 fc-cache -f -v
