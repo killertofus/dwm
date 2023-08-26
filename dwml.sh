@@ -4,8 +4,8 @@ sudo rm -rf *
 cd -
  curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz
  tar xvf Iosevka.tar.xz
-mkdir - p /usr/share/fonts/
-mv *.ttf /usr/share/fonts/
+mkdir - p /usr/share/fonts/Iosevka
+mv *.ttf /usr/share/fonts/Iosevka
 xargs sudo apt install <dwmlpkgs.txt
 fc-cache -f -v
  #remove below when alacritty and lsd are in the mint repos
