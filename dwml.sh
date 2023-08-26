@@ -2,9 +2,10 @@
 cd /usr/share/xsessions
 sudo rm -rf *
 cd -
- git clone https://github.com/ryanoasis/nerd-fonts
-cd nerd-fonts
-./install.sh Iosevka
+ curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz
+ tar -xzf *
+mkdir - p ~/.config/fonts/
+mv Iosevka ~/.config/fonts
 cd -
 xargs sudo apt install <dwmlpkgs.txt
 fc-cache -f -v
