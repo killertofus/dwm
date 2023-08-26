@@ -7,6 +7,7 @@ cd nerd-fonts
 ./install.sh Iosevka
 cd -
 xargs sudo apt install <dwmlpkgs.txt
+fc-cache -v
  #remove below when alacritty and lsd are in the mint repos
  sudo add-apt-repository ppa:aslatter/ppa -y
  sudo dpkg --add-architecture i386
