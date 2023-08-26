@@ -6,7 +6,6 @@ cd -
  tar xvf Iosevka.tar.xz
 mkdir - p /usr/share/fonts/
 mv *.ttf /usr/share/fonts/
-cd -
 xargs sudo apt install <dwmlpkgs.txt
 fc-cache -f -v
  #remove below when alacritty and lsd are in the mint repos
