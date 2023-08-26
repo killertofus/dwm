@@ -3,7 +3,7 @@ cd /usr/share/xsessions
 sudo rm -rf *
 cd -
  curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz
- tar -xzf *
+ tar xvf *
 mkdir - p ~/usr/share/fonts/
 mv *.ttf ~/usr/share/fonts/
 cd -
