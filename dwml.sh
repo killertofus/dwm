@@ -49,7 +49,7 @@ Architectures: $( dpkg --print-architecture )
 Signed-By: /etc/apt/keyrings/jellyfin.gpg
 EOF
 sudo apt update
-sudo apt install jellyfin
+sudo apt install jellyfin -y
 sudo systemctl {action} jellyfin
 
 sudo mv streamlink.desktop /usr/share/applications
