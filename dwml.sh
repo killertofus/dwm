@@ -9,10 +9,10 @@ sudo mv *.ttf /usr/share/fonts/Iosevka
 xargs sudo apt install <dwmlpkgs.txt
 fc-cache -f -v
  #remove below when alacritty and lsd are in the mint repos
- sudo add-apt-repository ppa:aslatter/ppa -y
- sudo dpkg --add-architecture i386
- sudo mkdir -pm755 /etc/apt/keyrings
- sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
+sudo add-apt-repository ppa:aslatter/ppa -y
+sudo dpkg --add-architecture i386
+sudo mkdir -pm755 /etc/apt/keyrings
+sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
 sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/${linux_release_name}.sources
  sudo apt update
  sudo apt install winehq-staging -y
