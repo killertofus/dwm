@@ -2,6 +2,9 @@
 
 mod key is super and rofi is left alt
 
+note that lsd and alacritty are not in the mint repos yet and are third party installs
+
+
 git clone  -b mint https://github.com/killertofus/awesome/ 
 
 cd awesome 
