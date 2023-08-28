@@ -1,4 +1,4 @@
-# mnt version
+# mint version
 
 mod key is super and rofi is left alt
 
