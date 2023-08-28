@@ -1,6 +1,7 @@
 # mnt version
 
 mod key is super and rofi is left alt
+
 git clone  -b mint https://github.com/killertofus/awesome/ 
 
 cd awesome 
