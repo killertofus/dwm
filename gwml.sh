@@ -5,8 +5,7 @@ echo "RANGER_LOAD_DEFAULT_RC=false"
 mkdir -p ~/.themes
 mv dracula.qbtheme ~/.themes
 git clone https://github.com/dracula/gtk
-cd gtk
-mv gtk-4.0 ~/.themes
+mv gtk/gtk-4.0 ~/.themes
 mkdir -p ~/.config/nvim
 mkdir -p ~/.config/alacritty
 mkdir -p ~/.config/awesome
@@ -14,7 +13,6 @@ mkdir -p ~/.config/rofi
 mkdir -p ~/.config/picom
 mkdir -p ~/.config/ranger
 mkdir -p ~/.config/tmux
-cd -
 mv init.vim ~/.config/nvim/
 mv alacritty.yml ~/.config/alacritty
 mv rc.lua theme ~/.config/awesome
