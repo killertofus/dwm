@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 sudo rm -rf */usr/share/xsessions
-xargs sudo apt install <dwmlpkgs.txt
 sudo curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz /usr/share/fonts
 sudo tar xvf Iosevka.tar.xz /usr/share/fonts
 sudo mkdir -p /usr/share/fonts/Iosevka
 sudo mv *.ttf /usr/share/fonts/Iosevka
-
+xargs sudo apt install <dwmlpkgs.txt
 fc-cache -f -v
  #remove below when alacritty and lsd are in the mint repos
 sudo add-apt-repository ppa:aslatter/ppa -y
