@@ -93,9 +93,7 @@ sudo apt update
 sudo apt install github-desktop
 sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
 ./gwml.sh
-cd config
-mv .zshrc ~/.
-cd -
+mv config/.zshrc ~/.
 ./Jdownloader2.sh
 git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
