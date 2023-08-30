@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 sudo rm -rf */usr/share/xsessions
 sudo mkdir -p /usr/share/fonts/Iosevka
-sudo curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz --output /usr/share/fonts/Iosevka | sudo tar xvf Iosevka.tar.xz
+sudo curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz -o /usr/share/fonts/Iosevka | sudo tar xvf Iosevka.tar.xz
 sudo rm -rf *.xz/usr/share/fonts/Iosevka
 sudo apt update
 xargs sudo apt install <dwmlpkgs.txt
