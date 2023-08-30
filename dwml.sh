@@ -107,4 +107,4 @@ sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
 cd -
 ./dwmlrmvpkgs.sh
-sudo chsh -s /bin/zsh 
+chsh -s /bin/zsh 
