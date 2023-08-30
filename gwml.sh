@@ -19,6 +19,7 @@ mv config/rc.lua theme ~/.config/awesome
 mv config/config1.rasi ~/.config/rofi
 mv config/picom.conf ~/.config/picom
 mv config/tmux.conf ~/.config/tmux
+mv config/.dircolors ~/
 mv config/plugins rc.conf ~/.config/ranger
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
