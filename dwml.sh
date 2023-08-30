@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-cd /usr/share/xsessions
-sudo rm -rf *
-cd -
+sudo rm -rf * /usr/share/xsessions
 curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz
 tar xvf Iosevka.tar.xz
 sudo mkdir -p /usr/share/fonts/Iosevka
