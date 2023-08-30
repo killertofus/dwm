@@ -108,4 +108,3 @@ sudo systemctl disable getty@tty2.service
 cd -
 ./dwmlrmvpkgs.sh
 chsh -s $(which zsh)
- 
