@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-cd -
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 wget https://github.com/dracula/qbittorrent/raw/master/dracula.qbtheme
 echo "RANGER_LOAD_DEFAULT_RC=false"
@@ -14,6 +13,7 @@ mkdir -p ~/.config/rofi
 mkdir -p ~/.config/picom
 mkdir -p ~/.config/ranger
 mkdir -p ~/.config/tmux
+
 mv config/init.vim ~/.config/nvim/
 mv config/alacritty.yml ~/.config/alacritty
 mv config/ rc.lua theme ~/.config/awesome
