@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+cd -
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 wget https://github.com/dracula/qbittorrent/raw/master/dracula.qbtheme
 echo "RANGER_LOAD_DEFAULT_RC=false"
