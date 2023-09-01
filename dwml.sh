@@ -15,7 +15,7 @@ sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-bui
 main() {
    codename=$(grep "CODENAME" /etc/upstream-release/lsb-release | cut -d'=' -f2)
     printf "%b" '\033[1;33mDownloading..\n\033[0m'
-    wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/$codename/winehq-$codename.sources
+    sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/$codename/winehq-$codename.sources
     printf "%b" '\033[1;32mDone! Goodbye!\n\033[0m'
 }
 
