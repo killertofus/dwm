@@ -36,7 +36,7 @@ sudo apt update
 
 sudo apt install librewolf -y
 
-curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
+yes "" | curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
 
 sudo mv streamlink.desktop /usr/share/applications
 sudo mv chatterino.desktop /usr/share/applications
