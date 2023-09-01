@@ -18,7 +18,6 @@ main() {
     wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/$codename/winehq-$codename.sources
     printf "%b" '\033[1;32mDone! Goodbye!\n\033[0m'
 }
-fi
 
 main
 sudo apt update
