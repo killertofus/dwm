@@ -7,6 +7,8 @@ sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.m
 sudo apt update
 xargs sudo apt install <dwmlpkgs.txt
 fc-cache -f -v
+sleep 9 echo "enter"
+curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
  #remove below when alacritty and lsd are in the mint repos
 sudo add-apt-repository ppa:aslatter/ppa -y
 sudo dpkg --add-architecture i386
@@ -27,7 +29,6 @@ curl -sSL https://raw.githubusercontent.com/alacritty/alacritty/master/extra/ala
 curl -sS https://webi.sh/lsd | sh
 source ~/config/envman/PATH.env
 rm -rf ~/snap
-curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash | sleep 9 echo "enter"
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
 wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
