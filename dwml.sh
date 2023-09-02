@@ -7,8 +7,8 @@ sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.m
 sudo apt update
 xargs sudo apt install <dwmlpkgs.txt
 fc-cache -f -v
-sleep 0.9m; echo "enter"
-curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
+
+curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash | sleep 0.5; echo "enter"
  #remove below when alacritty and lsd are in the mint repos
 sudo add-apt-repository ppa:aslatter/ppa -y
 sudo dpkg --add-architecture i386
