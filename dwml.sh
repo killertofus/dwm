@@ -27,6 +27,7 @@ curl -sSL https://raw.githubusercontent.com/alacritty/alacritty/master/extra/ala
 curl -sS https://webi.sh/lsd | sh
 source ~/config/envman/PATH.env
 rm -rf ~/snap
+yes "" | curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
 wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
@@ -50,8 +51,6 @@ NODE_MAJOR=20
 sudo apt update
 sudo apt install nodejs -y
 echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-
-yes "" | curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
 
 sudo mv streamlink.desktop /usr/share/applications
 sudo mv chatterino.desktop /usr/share/applications
