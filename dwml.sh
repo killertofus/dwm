@@ -27,7 +27,7 @@ curl -sSL https://raw.githubusercontent.com/alacritty/alacritty/master/extra/ala
 curl -sS https://webi.sh/lsd | sh
 source ~/config/envman/PATH.env
 rm -rf ~/snap
-echo "enter" | curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
+curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash |echo "enter"
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
 wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
