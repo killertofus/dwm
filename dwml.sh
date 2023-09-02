@@ -51,7 +51,7 @@ sudo apt update
 sudo apt install nodejs -y
 echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 
-sleep 9 echo -ne '\n'| curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
+yes "" | curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
 
 sudo mv streamlink.desktop /usr/share/applications
 sudo mv chatterino.desktop /usr/share/applications
