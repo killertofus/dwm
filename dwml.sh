@@ -8,7 +8,7 @@ sudo apt update
 xargs sudo apt install <dwmlpkgs.txt
 fc-cache -f -v
 
- curl https://repo.jellyfin.org/install-debuntu.sh |sleep 8; sudo bash; echo " "
+ curl https://repo.jellyfin.org/install-debuntu.sh |sleep 8; sudo bash; echo -ne '\n'
  #remove below when alacritty and lsd are in the mint repos
 sudo add-apt-repository ppa:aslatter/ppa -y
 sudo dpkg --add-architecture i386
