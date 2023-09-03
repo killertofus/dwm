@@ -26,6 +26,7 @@ main
 sudo apt update && sudo apt upgrade -y
 sudo apt install winehq-staging -y
 sudo apt install alacritty -y
+chsh -s $(which zsh)
 fc-cache -f -v
 curl -sSL https://raw.githubusercontent.com/alacritty/alacritty/master/extra/alacritty.info | tic -x 
 curl -sS https://webi.sh/lsd | sh
@@ -109,4 +110,3 @@ sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
 cd -
 ./dwmlrmvpkgs.sh
-chsh -s $(which zsh)
