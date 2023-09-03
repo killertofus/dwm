@@ -9,6 +9,8 @@ xargs sudo apt install <dwmlpkgs.txt
 sleep 0.5; xdotool key 'Return' | curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
  #remove below when alacritty and lsd are in the mint repos
 sudo add-apt-repository ppa:aslatter/ppa -y
+sudo apt install alacritty -y
+curl -sS https://webi.sh/lsd | sh
 sudo dpkg --add-architecture i386
 sudo mkdir -pm755 /etc/apt/keyrings
 sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
