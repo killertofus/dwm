@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 sudo apt install expect
 set timeout 360
-curl https://repo.jellyfin.org/install-debuntu.sh | echo -ne '\n' | sudo bash
 sudo rm -rf /usr/share/xsessions/*
 sudo wget -p /usr/share/fonts/Iosevka
 sudo wget  https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz --directory-prefix=/usr/share/fonts/Iosevka
@@ -10,7 +9,7 @@ sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.m
 sudo apt update
 xargs sudo apt install <dwmlpkgs.txt
 fc-cache -f -v
-
+curl https://repo.jellyfin.org/install-debuntu.sh
  #remove below when alacritty and lsd are in the mint repos
 sudo add-apt-repository ppa:aslatter/ppa -y
 sudo dpkg --add-architecture i386
