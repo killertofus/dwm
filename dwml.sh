@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-yes 'yes'| curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash;
+(sleep 12; echo; sleep 5) | curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash;
 sudo rm -rf /usr/share/xsessions/*
 sudo wget -p /usr/share/fonts/Iosevka
 sudo wget  https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz --directory-prefix=/usr/share/fonts/Iosevka
