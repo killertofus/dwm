@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-sudo apt install expect
 set timeout 360
 sudo rm -rf /usr/share/xsessions/*
 sudo wget -p /usr/share/fonts/Iosevka
