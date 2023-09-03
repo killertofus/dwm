@@ -34,7 +34,7 @@ distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -
 
 wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
 
- sudo tee /etc/apt/sources.list.d/librewolf.sources << EOF > /dev/null
+sudo tee /etc/apt/sources.list.d/librewolf.sources << EOF > /dev/null
 Types: deb
 URIs: https://deb.librewolf.net
 Suites: $distro
