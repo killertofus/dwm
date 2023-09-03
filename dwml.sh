@@ -6,7 +6,6 @@ sudo tar -xvf /usr/share/fonts/Iosevka/Iosevka.tar.xz -C /usr/share/fonts/Iosevk
 sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.md
 sudo apt update
 xargs sudo apt install <dwmlpkgs.txt
-fc-cache -f -v
 sleep 0.5; xdotool key 'Return' | curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
  #remove below when alacritty and lsd are in the mint repos
 sudo add-apt-repository ppa:aslatter/ppa -y
@@ -24,6 +23,7 @@ main
 sudo apt update
 sudo apt install winehq-staging -y
 sudo apt install alacritty -y
+fc-cache -f -v
 curl -sSL https://raw.githubusercontent.com/alacritty/alacritty/master/extra/alacritty.info | tic -x 
 curl -sS https://webi.sh/lsd | sh
 source ~/config/envman/PATH.env
@@ -44,7 +44,7 @@ sudo apt update
 
 sudo apt install librewolf -y
 sudo apt-get update
-sudo apt-get install -y ca-certificates curl gnupg
+
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
 NODE_MAJOR=20
