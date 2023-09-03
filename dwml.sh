@@ -47,7 +47,7 @@ EOF
 sudo apt update
 
 sudo apt install librewolf -y
-sudo apt-get update
+sudo apt update
 
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
