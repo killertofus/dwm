@@ -20,7 +20,7 @@ main() {
 }
 
 main
-sudo apt update
+sudo apt update && sudo apt upgrade -y
 sudo apt install winehq-staging -y
 sudo apt install alacritty -y
 fc-cache -f -v
