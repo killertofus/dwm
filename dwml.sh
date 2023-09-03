@@ -24,6 +24,7 @@ main() {
 
 main
 sudo apt update && sudo apt upgrade -y
+sudo dpkg --configure -a
 sudo apt install winehq-staging -y
 sudo apt install alacritty -y
 chsh -s $(which zsh)
