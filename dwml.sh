@@ -10,6 +10,7 @@ sleep 0.6; xdotool key 'Return' | curl https://repo.jellyfin.org/install-debuntu
  #remove below when alacritty and lsd are in the mint repos
 sudo add-apt-repository ppa:aslatter/ppa -y
 sudo apt update
+sudo -v
 sudo apt install alacritty -y
 curl -sS https://webi.sh/lsd | sh
 sudo dpkg --add-architecture i386
