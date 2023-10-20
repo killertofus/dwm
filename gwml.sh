@@ -20,7 +20,7 @@ mv rc.lua theme ~/.config/awesome
 mv config1.rasi ~/.config/rofi
 mv picom.conf ~/.config/picom
 mv tmux.conf ~/.config/tmux
-mv config/dwm/ * ~/.config/dwm
+mv config/dwm/* ~/.config/dwm
 mv .dircolors ~/
 mv plugins rc.conf ~/.config/ranger
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
