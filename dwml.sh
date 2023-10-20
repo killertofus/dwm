@@ -94,6 +94,7 @@ sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-package
 sudo apt update
 sudo apt install github-desktop
 sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
+sudo -v
 ./gwml.sh
 mv config/.zshrc ~/.
 ./Jdownloader2.sh
