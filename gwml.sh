@@ -8,7 +8,7 @@ git clone https://github.com/dracula/gtk
 mv gtk/gtk-4.0 ~/.themes
 mkdir -p ~/.config/nvim
 mkdir -p ~/.config/alacritty
-mkdir -p ~/.config/awesome
+mkdir -p ~/.config/dwm
 mkdir -p ~/.config/rofi
 mkdir -p ~/.config/picom
 mkdir -p ~/.config/ranger
@@ -17,7 +17,6 @@ cd config
 mv init.vim ~/.config/nvim/
 mv .xinitrc ~/
 mv alacritty.yml ~/.config/alacritty
-mv rc.lua theme ~/.config/awesome
 mv config1.rasi ~/.config/rofi
 mv picom.conf ~/.config/picom
 mv tmux.conf ~/.config/tmux
