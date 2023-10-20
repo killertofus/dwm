@@ -5,8 +5,8 @@ sudo wget  https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iose
 sudo tar -xvf /usr/share/fonts/Iosevka/Iosevka.tar.xz -C /usr/share/fonts/Iosevka/
 sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.md
 sudo apt update
-sleep 0.5; xdotool key 'Return' | curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
 xargs sudo apt install <dwmlpkgs.txt
+sleep 0.7; xdotool key 'Return' | curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
  #remove below when alacritty and lsd are in the mint repos
 sudo add-apt-repository ppa:aslatter/ppa -y
 sudo apt update
