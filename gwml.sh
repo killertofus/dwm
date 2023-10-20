@@ -15,6 +15,7 @@ mkdir -p ~/.config/ranger
 mkdir -p ~/.config/tmux
 cd config
 mv init.vim ~/.config/nvim/
+mv .xinitrc ~/
 mv alacritty.yml ~/.config/alacritty
 mv rc.lua theme ~/.config/awesome
 mv config1.rasi ~/.config/rofi
