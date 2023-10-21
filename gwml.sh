@@ -32,7 +32,7 @@ unzip master.zip
 mv lib dracula.zsh-theme ~/.oh-my-zsh/themes
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 sudo ln -sf ~/.config/dwm/slstatus /usr/local/bin/
-make -C ~/.config/dwm clean
-sudo make -C ~/.config/dwm clean install
+make -C ~/.config/dwm/ clean
+sudo make -C ~/.config/dwm/ clean install
 make -C ~/.config/dwm/slstatus clean
 sudo make -C ~/.config/dwm/slstatus clean install
