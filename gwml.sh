@@ -13,6 +13,7 @@ mkdir -p ~/.config/rofi
 mkdir -p ~/.config/picom
 mkdir -p ~/.config/ranger
 mkdir -p ~/.config/tmux
+mv wallpaper.jpg ~/.config/dwm/wallpaper.jpg
 cd config
 mv init.vim ~/.config/nvim/
 sudo mv dwm.desktop /usr/share/xsessions/
