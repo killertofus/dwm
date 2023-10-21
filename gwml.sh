@@ -20,8 +20,8 @@ mv alacritty.yml ~/.config/alacritty
 mv config1.rasi ~/.config/rofi
 mv picom.conf ~/.config/picom
 mv tmux.conf ~/.config/tmux
-mv config/dwm/* ~/.config/dwm
 mv .dircolors ~/
+mv config/dwm/* ~/.config/dwm
 mv plugins rc.conf ~/.config/ranger
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
