@@ -35,5 +35,5 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 make -C ~/.config/dwm/config.h clean
 sudo make -C ~/.config/dwm/ clean install
 make -C ~/.config/dwm/slstatus/ clean
-sudo make -C ~/.config/dwm/slstatus/ clean install
+make -C ~/.config/dwm/slstatus/ clean
 sudo ln -sf ~/.config/dwm/slstatus /usr/local/bin/
