@@ -58,4 +58,4 @@ slstatus &
 flameshot &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 dunst &
-exec dwm
+~/.dwm/dwm 2> ~/.logs/dwm
