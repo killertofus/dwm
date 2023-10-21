@@ -52,7 +52,7 @@ xscreensaver -nosplash &
 blueman-manager &
 volumeicon &
 /opt/piavpn/bin/pia-client %u &
-feh -12-bg-fill ~/Pictures/wall/wall.jpg &
+feh -12-bg-fill ~/.config/dwm/wall.jpg &
 picom -b &
 exec slstatus &
 flameshot &
