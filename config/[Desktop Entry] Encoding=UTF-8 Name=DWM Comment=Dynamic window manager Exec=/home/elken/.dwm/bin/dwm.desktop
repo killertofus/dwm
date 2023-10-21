@@ -1,7 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=DWM
-Comment=Dynamic window manager
-Exec=/~/.xinitrc
-Icon=dwm
-Type=XSession
