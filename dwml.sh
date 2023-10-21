@@ -30,7 +30,7 @@ sudo -v
 sudo apt install winehq-staging -y
 sudo apt install alacritty -y
 chsh -s $(which zsh)
-fc-cache -f -v
+sudo fc-cache -f -v
 curl -sSL https://raw.githubusercontent.com/alacritty/alacritty/master/extra/alacritty.info | tic -x 
 curl -sS https://webi.sh/lsd | sh
 source ~/config/envman/PATH.env
