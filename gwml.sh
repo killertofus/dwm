@@ -31,6 +31,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 wget https://github.com/dracula/zsh/archive/master.zip
 unzip master.zip
 mv lib dracula.zsh-theme ~/.oh-my-zsh/themes
+rm -rf master.zip
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 make -C ~/.config/dwm/config.h clean
 sudo make -C ~/.config/dwm/ clean install
