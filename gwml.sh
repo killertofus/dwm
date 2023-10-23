@@ -13,13 +13,15 @@ mkdir -p ~/.config/rofi
 mkdir -p ~/.config/picom
 mkdir -p ~/.config/ranger
 mkdir -p ~/.config/tmux
-cd config
-mv init.vim ~/.config/nvim/
-mv alacritty.yml ~/.config/alacritty
+mv config/.xinitrc ~/
+mv config/init.vim ~/.config/nvim/
+mv config/alacritty.yml ~/.config/alacritty
+mv config/config.rasi ~/.config/rofi
+mv config/picom.conf ~/.config/picom
+mv config/tmux.conf ~/.config/tmux
+mv config/plugins config/rc.conf ~/.config/ranger
+mv config/.dircolors ~/
 mv rc.lua theme ~/.config/awesome
-mv config1.rasi ~/.config/rofi
-mv picom.conf ~/.config/picom
-mv tmux.conf ~/.config/tmux
 mv .dircolors ~/
 mv config/plugins config/rc.conf ~/.config/ranger
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
