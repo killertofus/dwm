@@ -23,6 +23,7 @@ mv config/plugins config/rc.conf ~/.config/ranger
 mv config/.dircolors ~/
 mv rc.lua theme ~/.config/awesome
 mv config/.dircolors ~/
+mv config/.zshrc ~/
 mv config/plugins config/rc.conf ~/.config/ranger
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
