@@ -22,7 +22,7 @@ mv config/tmux.conf ~/.config/tmux
 mv config/plugins config/rc.conf ~/.config/ranger
 mv config/.dircolors ~/
 mv rc.lua theme ~/.config/awesome
-mv .dircolors ~/
+mv config/.dircolors ~/
 mv config/plugins config/rc.conf ~/.config/ranger
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
