@@ -21,7 +21,7 @@ mv config1.rasi ~/.config/rofi
 mv picom.conf ~/.config/picom
 mv tmux.conf ~/.config/tmux
 mv .dircolors ~/
-mv plugins rc.conf ~/.config/ranger
+mv config/plugins config/rc.conf ~/.config/ranger
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
