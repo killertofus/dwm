@@ -66,5 +66,5 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
 	/* function format          argument */
 	{ datetime, "%s",           "%a, %b %d %I:%M %p " },
-	{ run_command, "Vol %s", "pactl list sinks | awk '$1==\"Volume:\" {print $5 }' "},
+	{ run_command, "Vol %s" "pactl list sinks | awk '$1==\"Volume:\" {print $5 }' "},
 };
