@@ -122,7 +122,6 @@ znap source zsh-users/zsh-syntax-highlighting
 znap source marlonrichert/zcolors
 znap eval zcolors "zcolors ${(q)LS_COLORS}"
 znap source dracula/zsh
-source ~/.config/envman/PATH.env
 # `znap eval` caches and runs any kind of command output for you.
 znap eval iterm2 'curl -fsSL https://iterm2.com/shell_integration/zsh'
 
