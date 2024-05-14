@@ -13,16 +13,13 @@ mkdir -p ~/.config/rofi
 mkdir -p ~/.config/picom
 mkdir -p ~/.config/ranger
 mkdir -p ~/.config/tmux
-mv config/.xinitrc ~/
 mv config/init.vim ~/.config/nvim/
+mv config/.xinitrc ~/
 mv config/alacritty.toml ~/.config/alacritty
+mv config/rc.lua config/theme ~/.config/awesome
 mv config/config.rasi ~/.config/rofi
 mv config/picom.conf ~/.config/picom
 mv config/tmux.conf ~/.config/tmux
-mv config/plugins config/rc.conf ~/.config/ranger
-mv config/.dircolors ~/
-mv rc.lua theme ~/.config/awesome
-mv config/.dircolors ~/
 mv config/.zshrc ~/
 mv config/plugins config/rc.conf ~/.config/ranger
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -31,5 +28,6 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 wget https://github.com/dracula/zsh/archive/master.zip
 unzip master.zip
-mv lib dracula.zsh-theme ~/.oh-my-zsh/themes
+mv zsh-master/lib zsh-master/dracula.zsh-theme ~/.oh-my-zsh/themes
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+~/.tmux/plugins/tpm/scripts/install_plugins.sh
