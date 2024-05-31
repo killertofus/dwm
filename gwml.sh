@@ -35,8 +35,8 @@ mv lib dracula.zsh-theme ~/.oh-my-zsh/themes
 rm -rf master.zip
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ~/.tmux/plugins/tpm/scripts/install_plugins.sh
-#make -C ~/.config/dwm/ clean
-#sudo make -C ~/.config/dwm/ clean install
-#make -C ~/.config/dwm/slstatus/ clean
-#sudo make -C ~/.config/dwm/slstatus/ clean install
+make -C ~/.config/dwm/ clean
+sudo make -C ~/.config/dwm/ clean install
+make -C ~/.config/dwm/slstatus/ clean
+sudo make -C ~/.config/dwm/slstatus/ clean install
 
