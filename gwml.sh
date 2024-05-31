@@ -14,7 +14,7 @@ mkdir -p ~/.config/picom
 mkdir -p ~/.config/ranger
 mkdir -p ~/.config/tmux
 mv wallpaper.jpg ~/.config/dwm/wallpaper.jpg
-sudo mv dwm.desktop /usr/share/xsessions/
+sudo mv config/dwm.desktop /usr/share/xsessions/
 mv config/.xinitrc ~/
 mv config/init.vim ~/.config/nvim/
 mv config/alacritty.toml ~/.config/alacritty
@@ -34,7 +34,9 @@ unzip master.zip
 mv lib dracula.zsh-theme ~/.oh-my-zsh/themes
 rm -rf master.zip
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-make -C ~/.config/dwm/ clean
-sudo make -C ~/.config/dwm/ clean install
-make -C ~/.config/dwm/slstatus/ clean
-sudo make -C ~/.config/dwm/slstatus/ clean install
+~/.tmux/plugins/tpm/scripts/install_plugins.sh
+#make -C ~/.config/dwm/ clean
+#sudo make -C ~/.config/dwm/ clean install
+#make -C ~/.config/dwm/slstatus/ clean
+#sudo make -C ~/.config/dwm/slstatus/ clean install
+
