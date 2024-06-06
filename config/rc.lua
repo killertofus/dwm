@@ -762,9 +762,9 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.util.spawn("nm-applet")
 
 -- Autostart
-awful.spawn.with_shell("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &")
-awful.spawn.with_shell("dunst")
-awful.spawn.with_shell("xscreensaver -nosplash")
-awful.spawn.with_shell("volumeicon")
-awful.spawn.with_shell("/opt/piavpn/bin/pia-client %u")
-awful.spawn.with_shell("picom -b")
+awful.spawn.once("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &")
+awful.spawn.once("dunst")
+awful.spawn.once("xscreensaver -nosplash")
+awful.spawn.once("volumeicon")
+awful.spawn.once("/opt/piavpn/bin/pia-client %u")
+awful.spawn.once("picom -b")
