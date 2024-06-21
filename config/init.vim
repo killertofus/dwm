@@ -21,6 +21,8 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCM
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.x'}
 Plug 'michaelb/sniprun', {'do': 'sh install.sh'}
 Plug 'rcarriga/nvim-notify'
+Plug 'folke/noice.nvim'
+Plug 'MunifTanjim/nui.nvim'
 call plug#end()
 
 nnoremap <leader>n :NERDTreeFocus<CR>
@@ -48,6 +50,7 @@ set list listchars=tab:>\ ,trail:-,eol:$
 hi Normal guibg=NONE ctermbg=NONE
 
 lua << EOF
+require("noice").setup()
 require'sniprun'.setup({
   display = { "NvimNotify" },
 })
