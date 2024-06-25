@@ -100,7 +100,7 @@ sudo -v
 ./gwml.sh
 mv config/.zshrc ~/.
 ./Jdownloader2.sh
-git clone https://github.com/tristanisham/zvm
+curl https://raw.githubusercontent.com/tristanisham/zvm/master/install.sh | bash
 echo "# ZVM" >> $HOME/.profile
 echo export ZVM_INSTALL="$HOME/.zvm/self" >> $HOME/.profile
 echo export PATH="$PATH:$HOME/.zvm/bin" >> $HOME/.profile
