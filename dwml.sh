@@ -100,10 +100,16 @@ sudo -v
 ./gwml.sh
 mv config/.zshrc ~/.
 ./Jdownloader2.sh
+git clone https://github.com/tristanisham/zvm
+echo "# ZVM" >> $HOME/.profile
+echo export ZVM_INSTALL="$HOME/.zvm/self" >> $HOME/.profile
+echo export PATH="$PATH:$HOME/.zvm/bin" >> $HOME/.profile
+echo export PATH="$PATH:$ZVM_INSTALL/" >> $HOME/.profile
+zug i master
 git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
-make
-sudo make install installsystemd
+zig build
+zig build installsystemd
 sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
 cd -
