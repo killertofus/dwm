@@ -6,13 +6,7 @@ sudo tar -xvf /usr/share/fonts/Iosevka/Iosevka.tar.xz -C /usr/share/fonts/Iosevk
 sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.md
 sudo apt update
 xargs sudo apt install <dwmlpkgs.txt
-sleep 0.7; xdotool key 'Return' | curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
- #remove below when alacritty and lsd are in the mint repos
-sudo add-apt-repository ppa:aslatter/ppa -y
-sudo apt update
-sudo -v
-sudo apt install alacritty -y
-curl -sS https://webi.sh/lsd | sh
+sleep 0.6; xdotool key 'Return' | curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
 sudo dpkg --add-architecture i386
 sudo mkdir -pm755 /etc/apt/keyrings
 sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
@@ -26,14 +20,9 @@ main() {
 main
 sudo apt update && sudo apt upgrade -y
 sudo dpkg --configure -a
-sudo -v
 sudo apt install winehq-staging -y
-sudo apt install alacritty -y
 chsh -s $(which zsh)
-sudo fc-cache -f -v
-curl -sSL https://raw.githubusercontent.com/alacritty/alacritty/master/extra/alacritty.info | tic -x 
-curl -sS https://webi.sh/lsd | sh
-source ~/config/envman/PATH.env
+fc-cache -f -v
 rm -rf ~/snap
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
@@ -96,21 +85,12 @@ sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-package
 sudo apt update
 sudo apt install github-desktop
 sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
-sudo -v
 ./gwml.sh
-mv config/.zshrc ~/.
 ./Jdownloader2.sh
-curl https://raw.githubusercontent.com/tristanisham/zvm/master/install.sh | bash
-echo "# ZVM" >> $HOME/.profile
-echo export ZVM_INSTALL="$HOME/.zvm/self" >> $HOME/.profile
-echo export PATH="$PATH:$HOME/.zvm/bin" >> $HOME/.profile
-echo export PATH="$PATH:$ZVM_INSTALL/" >> $HOME/.profile
-source ~/.profile
-zig i master
 git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
-zig build
-zig build installsystemd
+make
+sudo make install installsystemd
 sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
 cd -
