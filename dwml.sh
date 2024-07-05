@@ -7,11 +7,6 @@ sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.m
 sudo apt update
 xargs sudo apt install <dwmlpkgs.txt
 sleep 0.6; xdotool key 'Return' | curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
- #remove below when alacritty and lsd are in the mint repos
-sudo add-apt-repository ppa:aslatter/ppa -y
-sudo apt update
-sudo apt install alacritty -y
-curl -sS https://webi.sh/lsd | sh
 sudo dpkg --add-architecture i386
 sudo mkdir -pm755 /etc/apt/keyrings
 sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
@@ -29,9 +24,6 @@ sudo apt install winehq-staging -y
 sudo apt install alacritty -y
 chsh -s $(which zsh)
 fc-cache -f -v
-curl -sSL https://raw.githubusercontent.com/alacritty/alacritty/master/extra/alacritty.info | tic -x 
-curl -sS https://webi.sh/lsd | sh
-source ~/config/envman/PATH.env
 rm -rf ~/snap
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
