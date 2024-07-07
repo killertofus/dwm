@@ -49,6 +49,16 @@ sudo mv *.png /usr/share/icons
 sudo mkdir -p /usr/local/bin
 
 
+mkdir zig
+cd zig
+wget https://ziglang.org/builds/zig-linux-x86_64-0.14.0-dev.184+bf588f67d.tar.xz
+ tar xf *
+ mv * zig
+ sudo mv zig/lib zig/zig /usr/local/bin
+ cd -
+
+
+
 curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/latest \
 | grep "x86_64.*AppImage" \
 | cut -d : -f 2,3 \
