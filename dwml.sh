@@ -53,6 +53,7 @@ mkdir zig
 cd zig
 wget https://ziglang.org/builds/zig-linux-x86_64-0.14.0-dev.184+bf588f67d.tar.xz
  tar xf *
+ rm -rf *.tar.xz
  mv * zig
  sudo mv zig/lib zig/zig /usr/local/bin
  cd -
