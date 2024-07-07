@@ -51,7 +51,7 @@ sudo mkdir -p /usr/local/bin
 
 mkdir zig
 cd zig
-wget https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz
+wget https://ziglang.org/builds/zig-linux-x86_64-0.12.1.tar.xz
  tar xf *
  rm -rf *.tar.xz
  mv * zig
