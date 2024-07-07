@@ -100,8 +100,8 @@ sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && s
 ./Jdownloader2.sh
 git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
-zig build
-zig build installsystemd
+sudo zig build
+sudp zig build installsystemd
 sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
 cd -
