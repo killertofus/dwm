@@ -101,7 +101,7 @@ sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && s
 git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
 sudo zig build
-sudp zig build installsystemd
+sudo zig build installsystemd
 sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
 cd -
