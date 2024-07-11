@@ -22,6 +22,7 @@ sudo apt update && sudo apt upgrade -y
 sudo dpkg --configure -a
 echo 'Defaults !pwfeedback'|sudo tee /etc/sudoers.d/9_no_pwfeedback
 sudo apt install winehq-staging -y
+sudo -v
 chsh -s $(which zsh)
 fc-cache -f -v
 rm -rf ~/snap
