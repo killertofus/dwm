@@ -1,4 +1,3 @@
-source ~/zsh-snap/znap.zsh
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
@@ -109,6 +108,7 @@ eval "$(dircolors ~/.dircolors)";
         https://github.com/marlonrichert/zsh-snap.git ~/Git/zsh-snap
 LS_COLORS+=':ow=01;33'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
+source ~/Git/zsh-snap/znap.zsh  # Start Znap
 # `znap prompt` makes your prompt visible in just 15-40ms!
 znap prompt sindresorhus/pure
 # `znap source` automatically downloads and starts your plugins.
