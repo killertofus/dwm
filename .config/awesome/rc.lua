@@ -757,14 +757,3 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
-
--- Utils
-awful.util.spawn("nm-applet")
-
--- Autostart
-awful.spawn.once("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &")
-awful.spawn.once("dunst")
-awful.spawn.once("xscreensaver -nosplash")
-awful.spawn.once("volumeicon")
-awful.spawn.once("/opt/piavpn/bin/pia-client %u")
-awful.spawn.once("picom -b")
