@@ -42,6 +42,18 @@ sudo apt install librewolf -y
 sudo apt update
 
 
+mkdir zig
+cd zig
+wget https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz
+ tar xf *
+ rm -rf *.tar.xz
+ mv * zig
+ sudo mv zig/lib zig/zig /usr/local/bin
+ cd -
+
+
+
+
 sudo mv streamlink.desktop /usr/share/applications
 sudo mv chatterino.desktop /usr/share/applications
 sudo mv rustdesk.desktop /usr/share/applications
