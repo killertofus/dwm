@@ -5,7 +5,6 @@ select opt in "${options[@]}"
 do
     case $opt in
         "dwl")
-            sudo apt install 
             sed -i 's/dwm/dwl/g' gwml.sh
             sed -i '21d;20d' gwml.sh
             sed -i 's/picom/wdisplays/g' dwmlpkgs.txt
