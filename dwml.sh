@@ -14,7 +14,7 @@ do
             sed -i '1 a libwayland-cursor++1 libwayland-bin libinput-dev libwayland-dev libwlroots-dev' dwmlpkgs.txt
             sed -i 's/volumeicon-alsa/waybar/g' dwmlpkgs.txt
             sed -i '74 a  git clone https://github.com/LGFae/swww/' dwml.sh
-            sed -i '75 a cd sww ' dwml.sh
+            sed -i '75 a cd swww ' dwml.sh
             sed -i '76 a cargo build --release ' dwml.sh
             sed -i '2,27d' dwml.sh 
             break  # exit the loop after dwl is chosen
