@@ -16,7 +16,8 @@ do
             sed -i '74 a  git clone https://github.com/LGFae/swww/' dwml.sh
             sed -i '75 a cd swww ' dwml.sh
             sed -i '76 a cargo build --release ' dwml.sh
-            sed -i '2,27d' dwml.sh 
+            sed -i '77 a mv swww/target/release/swww swww/target/release/swww-daemon /usr/local/bin' 
+            sed -i '2,28d' dwml.sh 
             break  # exit the loop after dwl is chosen
             ;;
         "dwm")
