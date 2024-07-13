@@ -6,6 +6,7 @@ do
     case $opt in
         "dwl")
             sed -i 's/dwm/dwl/g' gwml.sh
+            sed -i 's/xsessions/wayland-sessions/g' gwml.sh
             sed -i '21d;20d' gwml.sh
             sed -i 's/picom/wdisplays/g' dwmlpkgs.txt
             sed -i 's/feh/wayland-protocols/g' dwmlpkgs.txt
