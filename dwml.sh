@@ -26,7 +26,7 @@ do
         *) echo "invalid option $REPLY";;
     esac
     done
-    
+
 source "$0" # restart the script after user selection
 sudo rm -rf /usr/share/xsessions/*
 sudo wget -p /usr/share/fonts/Iosevka
