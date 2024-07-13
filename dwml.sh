@@ -13,11 +13,10 @@ do
             sed -i 's/feh/wayland-protocols/g' dwmlpkgs.txt
             sed -i '1 a libwayland-cursor++1 libwayland-bin libinput-dev libwayland-dev libwlroots-dev' dwmlpkgs.txt
             sed -i 's/volumeicon-alsa/waybar/g' dwmlpkgs.txt
-            sed -i '74 a  echo git clone https://github.com/LGFae/swww/' dwml.sh
-            sed -i '74 a  echo git clone https://github.com/LGFae/swww/' dwml.sh
-            sed -i '75 a echo cd sww ' dwml.sh
-            sed -i '76 a sleep 6; pwd ' dwml.sh
-            sed -i '2,28d' dwml.sh && exit &&  echo ./dwml.sh
+            sed -i '74 a  git clone https://github.com/LGFae/swww/' dwml.sh
+            sed -i '75 a cd sww ' dwml.sh
+            sed -i '76 a cargo build --release ' dwml.sh
+            sed -i '2,29d' dwml.sh && exit
             ;;
         "dwm")
             echo "you chose choice 2"
@@ -25,6 +24,7 @@ do
             ;;
         *) echo "invalid option $REPLY";;
     esac
+exec ./dwml.sh
 done
 sudo rm -rf /usr/share/xsessions/*
 sudo wget -p /usr/share/fonts/Iosevka
