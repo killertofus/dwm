@@ -16,7 +16,8 @@ do
             sed -i '74 a  git clone https://github.com/LGFae/swww/' dwml.sh
             sed -i '75 a cd sww ' dwml.sh
             sed -i '76 a cargo build --release ' dwml.sh
-            sed -i '2,26d' dwml.sh && exit
+            sed -i '2,26d' dwml.sh 
+            break  # exit the loop after dwl is chosen
             ;;
         "dwm")
             echo "you chose choice 2"
@@ -24,7 +25,8 @@ do
             ;;
         *) echo "invalid option $REPLY";;
     esac
-done && ./dwml.sh
+done
+source "$0" # restart the script after user selection
 sudo rm -rf /usr/share/xsessions/*
 sudo wget -p /usr/share/fonts/Iosevka
 sudo wget  https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz --directory-prefix=/usr/share/fonts/Iosevka
@@ -71,6 +73,9 @@ sudo apt update
 sudo mv streamlink.desktop /usr/share/applications
 sudo mv chatterino.desktop /usr/share/applications
 sudo mv rustdesk.desktop /usr/share/applications
+git clone https://github.com/LGFae/swww/
+cd sww 
+cargo build --release 
 sudo mv *.png /usr/share/icons
 sudo mkdir -p /usr/local/bin
 
@@ -93,7 +98,7 @@ curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/l
 | wget -qi -
 
  mv *.AppImage Streamlink_Twitch_GUI
- 
+
 
 
 
@@ -111,7 +116,7 @@ curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest \
 | cut -d : -f 2,3 \
 | tr -d \" \
 | wget -qi -
- 
+
  mv *.AppImage rustdesk
  find ./  -regextype posix-egrep -regex '.*{3,5}.*' -print0 | xargs -0 chmod +x
 sudo mv rustdesk Chatterino Streamlink_Twitch_GUI /usr/local/bin
