@@ -25,8 +25,7 @@ do
             ;;
         *) echo "invalid option $REPLY";;
     esac
-./dwml.sh
-done
+done && ./dwml.sh
 sudo rm -rf /usr/share/xsessions/*
 sudo wget -p /usr/share/fonts/Iosevka
 sudo wget  https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz --directory-prefix=/usr/share/fonts/Iosevka
