@@ -24,7 +24,7 @@ do
             ;;
         *) echo "invalid option $REPLY";;
     esac
-echo ./dwml.sh
+echo exec ./dwml.sh
 done
 sudo rm -rf /usr/share/xsessions/*
 sudo wget -p /usr/share/fonts/Iosevka
