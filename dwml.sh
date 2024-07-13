@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+echo "hello"
 PS3='dwl or dwm: '
 options=("dwl" "dwm")
 select opt in "${options[@]}"
@@ -16,7 +17,7 @@ do
             sed -i '74 a  git clone https://github.com/LGFae/swww/' dwml.sh
             sed -i '75 a cd sww ' dwml.sh
             sed -i '76 a cargo build --release ' dwml.sh
-            sed -i '2,28d' dwml.sh 
+            sed -i '3,28d' dwml.sh 
             break  # exit the loop after dwl is chosen
             ;;
         "dwm")
@@ -25,7 +26,8 @@ do
             ;;
         *) echo "invalid option $REPLY";;
     esac
-done
+    done
+    
 source "$0" # restart the script after user selection
 sudo rm -rf /usr/share/xsessions/*
 sudo wget -p /usr/share/fonts/Iosevka
