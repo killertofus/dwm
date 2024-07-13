@@ -16,8 +16,7 @@ do
             sed -i '74 a  git clone https://github.com/LGFae/swww/' dwml.sh
             sed -i '75 a cd sww ' dwml.sh
             sed -i '76 a cargo build --release ' dwml.sh
-            sed -i '2,27d' dwml.sh && exit
-            break
+            sed -i '2,26d' dwml.sh && exit
             ;;
         "dwm")
             echo "you chose choice 2"
