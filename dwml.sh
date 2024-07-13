@@ -16,7 +16,7 @@ do
             sed -i '74 a  git clone https://github.com/LGFae/swww/' dwml.sh
             sed -i '75 a cd sww ' dwml.sh
             sed -i '76 a cargo build --release ' dwml.sh
-            sed -i '2,29d' dwml.sh && exit
+            sed -i '2,27d' dwml.sh && exit
             ;;
         "dwm")
             echo "you chose choice 2"
@@ -24,8 +24,8 @@ do
             ;;
         *) echo "invalid option $REPLY";;
     esac
-exec ./dwml.sh
 done
+./dwml.sh
 sudo rm -rf /usr/share/xsessions/*
 sudo wget -p /usr/share/fonts/Iosevka
 sudo wget  https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz --directory-prefix=/usr/share/fonts/Iosevka
