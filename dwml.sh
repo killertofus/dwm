@@ -14,9 +14,9 @@ do
             sed -i 's/xscreensaver/libwayland-cursor++1 liblz4-dev libwayland-bin libinput-dev libwayland-dev libwlroots-dev/g' dwmlpkgs.txt
             sed -i 's/volumeicon-alsa/waybar/g' dwmlpkgs.txt
             sed -i '$ a git clone https://github.com/LGFae/swww/' gwml.sh
-            sed -i '$ a cd swww && ' gwml.sh
+            sed -i '$ a cd swww' gwml.sh
             sed -i '$ a cargo build --release ' gwml.sh
-            sed -i '$ a mv swww/target/release/swww swww/target/release/swww-daemon /usr/local/bin'  gwml.sh
+            sed -i '$ a mv /target/release/swww /target/release/swww-daemon /usr/local/bin'  gwml.sh
             sed -i '2,28d' dwml.sh 
             break  # exit the loop after dwl is chosen
             ;;
