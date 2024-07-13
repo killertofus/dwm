@@ -17,6 +17,7 @@ do
             sed -i '75 a cd sww ' dwml.sh
             sed -i '76 a cargo build --release ' dwml.sh
             sed -i '2,27d' dwml.sh && exit
+            break
             ;;
         "dwm")
             echo "you chose choice 2"
@@ -24,7 +25,7 @@ do
             ;;
         *) echo "invalid option $REPLY";;
     esac
-exec ./dwml.sh
+./dwml.sh
 done
 sudo rm -rf /usr/share/xsessions/*
 sudo wget -p /usr/share/fonts/Iosevka
