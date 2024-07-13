@@ -8,7 +8,7 @@ do
             sed -i 's/dwm/dwl/g' gwml.sh
             sed -i 's/xsessions/wayland-sessions/g' gwml.sh
             sed -i 's/.xinitrc/startup.sh/g' gwml.sh
-            sed -i '21d;20d' gwml.sh
+            sed -i '21d;22d' gwml.sh
             sed -i 's/picom/wdisplays/g' dwmlpkgs.txt
             sed -i 's/feh/wayland-protocols/g' dwmlpkgs.txt
             sed -i '1 a libwayland-cursor++1 libwayland-bin libinput-dev libwayland-dev libwlroots-dev' dwmlpkgs.txt
