@@ -11,7 +11,7 @@ do
             sed -i '21d;22d' gwml.sh
             sed -i 's/picom/wdisplays/g' dwmlpkgs.txt
             sed -i 's/feh/wayland-protocols/g' dwmlpkgs.txt
-            sed -i 's/xscreensaver/libwayland-cursor++1 libwayland-bin libinput-dev libwayland-dev libwlroots-dev/g' dwmlpkgs.txt
+            sed -i 's/xscreensaver/libwayland-cursor++1 liblz4-dev libwayland-bin libinput-dev libwayland-dev libwlroots-dev/g' dwmlpkgs.txt
             sed -i 's/volumeicon-alsa/waybar/g' dwmlpkgs.txt
             sed -i '$ a git clone https://github.com/LGFae/swww/' gwml.sh
             sed -i '$ a cd swww && ' gwml.sh
