@@ -75,9 +75,6 @@ sudo apt update
 sudo mv streamlink.desktop /usr/share/applications
 sudo mv chatterino.desktop /usr/share/applications
 sudo mv rustdesk.desktop /usr/share/applications
-git clone https://github.com/LGFae/swww/
-cd sww 
-cargo build --release 
 sudo mv *.png /usr/share/icons
 sudo mkdir -p /usr/local/bin
 
