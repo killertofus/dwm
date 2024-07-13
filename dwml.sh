@@ -17,9 +17,7 @@ do
             sed -i '74 a  echo git clone https://github.com/LGFae/swww/' dwml.sh
             sed -i '75 a echo cd sww ' dwml.sh
             sed -i '76 a sleep 6; pwd ' dwml.sh
-           while ./dwml.sh ; do : ; done
-            break
-            exit
+         sed -i sed '2,20d' dwml.sh && exit && ./dwml.sh
             ;;
         "dwm")
             echo "you chose choice 2"
