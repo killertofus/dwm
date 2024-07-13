@@ -13,10 +13,10 @@ do
             sed -i 's/feh/wayland-protocols/g' dwmlpkgs.txt
             sed -i 's/xscreensaver/libwayland-cursor++1 libwayland-bin libinput-dev libwayland-dev libwlroots-dev/g' dwmlpkgs.txt
             sed -i 's/volumeicon-alsa/waybar/g' dwmlpkgs.txt
-            sed -i '74 a wget https://github.com/LGFae/swww/' dwml.sh
+            sed -i '31 a wget https://github.com/LGFae/swww/' dwml.sh
             sed -i '75 a cd swww && ' dwml.sh
             sed -i '76 a cargo build --release ' dwml.sh
-            sed -i '52 a mv swww/target/release/swww swww/target/release/swww-daemon /usr/local/bin' 
+            sed -i '77 a mv swww/target/release/swww swww/target/release/swww-daemon /usr/local/bin' 
             sed -i '2,28d' dwml.sh 
             break  # exit the loop after dwl is chosen
             ;;
