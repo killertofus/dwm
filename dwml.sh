@@ -16,7 +16,7 @@ do
             sed -i '$ a git clone https://github.com/LGFae/swww/' gwml.sh
             sed -i '$ a cd swww' gwml.sh
             sed -i '$ a cargo build --release ' gwml.sh
-            sed -i '$ a sudo mv target/release/swww target/release/swww-daemon /usr/local/bin'  gwml.sh
+            sed -i '$ a sudo mv target/release/swww target/release/swww-daemon /usr/local/bin && swww img ~/.config/dwl/wallpaper.jpg'  gwml.sh
             sed -i '2,28d' dwml.sh 
             break  # exit the loop after dwl is chosen
             ;;
@@ -81,7 +81,7 @@ sudo mkdir -p /usr/local/bin
 
 mkdir zig
 cd zig
-wget https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz
+wget https://ziglang.org/download/0.12.0/zig-linux-x86_64-0.12.0.tar.xz
  tar xf *
  rm -rf *.tar.xz
  mv * zig
