@@ -16,7 +16,7 @@ do
             sed -i '$ a git clone https://github.com/LGFae/swww/' gwml.sh
             sed -i '$ a cd swww' gwml.sh
             sed -i '$ a cargo build --release ' gwml.sh
-            sed -i '$ a sudo mv target/release/swww target/release/swww-daemon /usr/local/bin && swww img ~/.config/dwl/wallpaper.jpg'  gwml.sh
+            sed -i '$ a sudo mv target/release/swww target/release/swww-daemon /usr/local/bin && swww-daemon && swww img ~/.config/dwl/wallpaper.jpg'  gwml.sh
             sed -i '2,28d' dwml.sh 
             break  # exit the loop after dwl is chosen
             ;;
