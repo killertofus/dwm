@@ -17,11 +17,11 @@ do
             sed -i '$ a cd swww' gwml.sh
             sed -i '$ a cargo build --release ' gwml.sh
             sed -i '$ a sudo mv target/release/swww target/release/swww-daemon /usr/local/bin'  gwml.sh
-            sed -i '2,27d' dwml.sh 
+            sed -i '2,28d' dwml.sh 
             break  # exit the loop after dwl is chosen
             ;;
         "dwm")
-            sed -i '2,27d' dwml.sh
+            sed -i '2,28d' dwml.sh
             break
             ;;
         *) echo "invalid option $REPLY";;
