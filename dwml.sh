@@ -21,7 +21,6 @@ do
             break  # exit the loop after dwl is chosen
             ;;
         "dwm")
-            echo "you chose choice 2"
             break
             ;;
         *) echo "invalid option $REPLY";;
