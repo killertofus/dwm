@@ -1,34 +1,4 @@
 #!/usr/bin/env bash
-PS3='dwl or dwm: '
-options=("dwl" "dwm")
-select opt in "${options[@]}"
-do
-    case $opt in
-        "dwl")
-            sed -i 's/dwm/dwl/g' gwml.sh
-            sed -i 's/xsessions/wayland-sessions/g' gwml.sh
-            sed -i 's/.xinitrc/startup.sh/g' gwml.sh
-            sed -i '21d;22d' gwml.sh
-            sed -i 's/picom/wdisplays/g' dwmlpkgs.txt
-            sed -i 's/feh/wayland-protocols/g' dwmlpkgs.txt
-            sed -i 's/xscreensaver/libwayland-cursor++1 liblz4-dev libwayland-bin libinput-dev libwayland-dev libwlroots-dev/g' dwmlpkgs.txt
-            sed -i 's/volumeicon-alsa/waybar/g' dwmlpkgs.txt
-            sed -i '$ a git clone https://github.com/LGFae/swww/' gwml.sh
-            sed -i '$ a cd swww' gwml.sh
-            sed -i '$ a cargo build --release ' gwml.sh
-            sed -i '$ a sudo mv target/release/swww target/release/swww-daemon /usr/local/bin'  gwml.sh
-            sed -i '2,28d' dwml.sh 
-            break  # exit the loop after dwl is chosen
-            ;;
-        "dwm")
-            sed -i '2,28d' dwml.sh
-            break
-            ;;
-        *) echo "invalid option $REPLY";;
-    esac
-    done
-
-source "$0" # restart the script after user selection
 sudo rm -rf /usr/share/xsessions/*
 sudo wget -p /usr/share/fonts/Iosevka
 sudo wget  https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz --directory-prefix=/usr/share/fonts/Iosevka
