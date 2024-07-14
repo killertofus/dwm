@@ -21,7 +21,7 @@ do
             break  # exit the loop after dwl is chosen
             ;;
         "dwm")
-            done
+            echo "done"
             ;;
         *) echo "invalid option $REPLY";;
     esac
