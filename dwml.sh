@@ -6,7 +6,7 @@ sudo tar -xvf /usr/share/fonts/Iosevka/Iosevka.tar.xz -C /usr/share/fonts/Iosevk
 sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.md
 sudo apt update
 sudo -v
-xargs sudo apt install <dwmlpkgs.txt
+xargs sudo apt install <dwmlpkgs.txt -y
 sleep 0.6; xdotool key 'Return' | curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
 sudo dpkg --add-architecture i386
 sudo mkdir -pm755 /etc/apt/keyrings
