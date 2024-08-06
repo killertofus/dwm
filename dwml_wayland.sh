@@ -14,7 +14,7 @@ sudo wget  https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iose
 sudo tar -xvf /usr/share/fonts/Iosevka/Iosevka.tar.xz -C /usr/share/fonts/Iosevka/
 sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.md
 sudo apt update
-xargs sudo apt install <dwmlpkgs.txt
+xargs sudo apt install <dwmlpkgs.txt -y
 sleep 0.6; xdotool key 'Return' | curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
 sudo dpkg --add-architecture i386
 sudo mkdir -pm755 /etc/apt/keyrings
