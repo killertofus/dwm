@@ -59,6 +59,7 @@ volumeicon-alsa
 w3m
 wget
 xarchiver
+-y
 xdotool
 xscreensaver
 zsh
