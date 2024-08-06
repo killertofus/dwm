@@ -4,7 +4,6 @@ awesome
 blueman
 bluez
 btop
-btop
 build-essential
 ca-certificates
 caja
@@ -16,7 +15,6 @@ dunst
 feh
 firefox
 flameshot
-fonts-dejavu
 fonts-dejavu
 fonts-hack
 fonts-ibm-plex
@@ -53,7 +51,6 @@ steam
 streamlink
 timeshift
 tmux
-ttf-bitstream-vera
 ttf-bitstream-vera
 unzip
 virt-manager
