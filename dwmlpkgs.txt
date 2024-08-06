@@ -3,6 +3,7 @@ apt-transport-https
 awesome
 blueman
 bluez
+bluez-tools
 btop
 build-essential
 ca-certificates
