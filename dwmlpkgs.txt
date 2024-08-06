@@ -61,7 +61,6 @@ hicolor-icon-theme
 neofetch
 openssh-client
 dunst
-lib11-dev
 libxft-dev
 libxinerama-dev
 libx11-dev
