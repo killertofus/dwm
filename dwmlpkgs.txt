@@ -4,6 +4,7 @@ awesome
 blueman
 bluez
 bluez-firmware
+bluez-tools
 btop
 build-essential
 ca-certificates
