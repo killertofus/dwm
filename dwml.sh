@@ -6,7 +6,7 @@ sudo tar -xvf /usr/share/fonts/Iosevka/Iosevka.tar.xz -C /usr/share/fonts/Iosevk
 sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.md
 sudo apt update && sudo apt install nala -y
 sudo nala fetch --auto
-xargs sudo apt install <dwmlpkgs.txt -y
+xargs sudo nala install <dwmlpkgs.txt -y
 sudo -v
 sleep 0.6; xdotool key 'Return' | curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
 sudo dpkg --add-architecture i386
