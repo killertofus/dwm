@@ -7,6 +7,9 @@ sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.m
 sudo apt update
 sudo -v
 xargs sudo apt install <dwmlpkgs.txt -y
+sudo systemctl enable libvirtd
+sudo adduser $USER libvirt
+sudo adduser $USER kvm
 sleep 0.6; xdotool key 'Return' | curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
 sudo dpkg --add-architecture i386
 sudo mkdir -pm755 /etc/apt/keyrings
