@@ -40,10 +40,10 @@ Components: main
 Architectures: amd64
 Signed-By: /usr/share/keyrings/librewolf.gpg
 EOF
-sudo apt update
+sudo apt update -y
 
 sudo apt install librewolf -y
-sudo apt update
+sudo apt update -y
 
 
 mkdir zig
