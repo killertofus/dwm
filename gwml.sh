@@ -4,6 +4,7 @@ echo "RANGER_LOAD_DEFAULT_RC=false"
 mv .themes ~/
 mv .icons ~/
 mv .zshrc ~/
+mv .dircolors ~/
 sudo mv awesome.desktop /usr/share/xsessions/
 mv .xinitrc ~/
 cp -r .config ~/
