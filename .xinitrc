@@ -51,6 +51,7 @@ fi
 xscreensaver -nosplash &
 blueman-manager &
 volumeicon &
+/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 /opt/piavpn/bin/pia-client %u &
 picom -b &
 flameshot &
