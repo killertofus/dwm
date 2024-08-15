@@ -41,6 +41,7 @@ let g:vimtex_compiler_method = 'latexrun'
 let maplocalleader = ","
 :set clipboard=unnamed
 :set autoindent
+:set termguicolors
 :syntax on
 :set spell
 syntax enable
