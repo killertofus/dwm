@@ -106,6 +106,7 @@ sudo apt install github-desktop -y
 sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
 ./gwml.sh
 ./Jdownloader2.sh
+nvim > /dev/null 2>&1 &
 git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
 sudo zig build installsystemd
