@@ -43,7 +43,7 @@ wget https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz
  cd -
 
 
-flatpak install -y --noninteractive flathub com.chatterino.chatterino/x86_64/nightly librewolf io.github.shiftey.Desktop JellyfinServer
+flatpak install -y --noninteractive flathub com.chatterino.chatterino/x86_64/nightly librewolf io.github.shiftey.Desktop org.jellyfin.JellyfinServer
 sudo mv streamlink.desktop /usr/share/applications
 sudo mv *.png /usr/share/icons
 sudo mkdir -p /usr/local/bin
