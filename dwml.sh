@@ -1,4 +1,4 @@
-e#!/usr/bin/env bash
+#!/usr/bin/env bash
 sudo rm -rf /usr/share/xsessions/*
 sudo wget -p /usr/share/fonts/Iosevka
 sudo wget  https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz --directory-prefix=/usr/share/fonts/Iosevka
@@ -45,6 +45,7 @@ wget https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz
 
 flatpak install -y --noninteractive flathub com.chatterino.chatterino/x86_64/stable librewolf io.github.shiftey.Desktop org.jellyfin.JellyfinServer JDownloader
 sudo mv streamlink.desktop /usr/share/applications
+sudo mv rustdesk.desktop /usr/share/applications
 sudo mv *.png /usr/share/icons
 sudo mkdir -p /usr/local/bin
 
@@ -57,6 +58,15 @@ curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/l
 
  mv *.AppImage Streamlink_Twitch_GUI
 
+
+
+curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest \
+| grep "x86_64.*AppImage" \
+| cut -d : -f 2,3 \
+| tr -d \" \
+| wget -qi -
+
+ mv *.AppImage rustdesk
  find ./  -regextype posix-egrep -regex '.*{3,5}.*' -print0 | xargs -0 chmod +x
 sudo mv Streamlink_Twitch_GUI /usr/local/bin
 
