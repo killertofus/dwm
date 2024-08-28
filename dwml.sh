@@ -29,26 +29,8 @@ sudo apt install winehq-staging -y
 chsh -s $(which zsh)
 fc-cache -f -v
 rm -rf ~/snap
-distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
-
-wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
-
-sudo tee /etc/apt/sources.list.d/librewolf.sources << EOF > /dev/null
-Types: deb
-URIs: https://deb.librewolf.net
-Suites: $distro
-Components: main
-Architectures: amd64
-Signed-By: /usr/share/keyrings/librewolf.gpg
-EOF
-sudo apt update
-
-sudo apt install librewolf -y
-sudo apt update
-
-
+flatpak install -y --noninteractive flathub com.chatterino.chatterino/x86_64/stable librewolf io.github.shiftey.Desktop org.jellyfin.JellyfinServer JDownloader
 sudo mv streamlink.desktop /usr/share/applications
-sudo mv chatterino.desktop /usr/share/applications
 sudo mv rustdesk.desktop /usr/share/applications
 sudo mv *.png /usr/share/icons
 sudo mkdir -p /usr/local/bin
@@ -74,17 +56,6 @@ curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/l
  mv *.AppImage Streamlink_Twitch_GUI
 
 
-
-
-
-curl -s https://api.github.com/repos/Chatterino/chatterino2/releases/latest \
-| grep "x86_64.*AppImage" \
-| cut -d : -f 2,3 \
-| tr -d \" \
-| wget -qi -
- mv *.AppImage Chatterino
-
-
 curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest \
 | grep "x86_64.*AppImage" \
 | cut -d : -f 2,3 \
@@ -93,16 +64,11 @@ curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest \
 
  mv *.AppImage rustdesk
  find ./  -regextype posix-egrep -regex '.*{3,5}.*' -print0 | xargs -0 chmod +x
-sudo mv rustdesk Chatterino Streamlink_Twitch_GUI /usr/local/bin
+sudo mv rustdesk Streamlink_Twitch_GUI /usr/local/bin
 
 
-wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/shiftkey-packages.gpg > /dev/null
-sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-packages.gpg] https://apt.packages.shiftkey.dev/ubuntu/ any main" > /etc/apt/sources.list.d/shiftkey-packages.list'
-sudo apt update
-sudo apt install github-desktop
 sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
 ./gwml.sh
-./Jdownloader2.sh
 nvim > /dev/null 2>&1 &
 git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
