@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+e#!/usr/bin/env bash
 sudo rm -rf /usr/share/xsessions/*
 sudo wget -p /usr/share/fonts/Iosevka
 sudo wget  https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz --directory-prefix=/usr/share/fonts/Iosevka
@@ -13,7 +13,6 @@ sudo systemctl enable libvirtd
 sudo adduser $USER libvirt
 sudo adduser $USER kvm
 sudo -v
-sleep 0.6; xdotool key 'Return' | curl https://repo.jellyfin.org/install-debuntu.sh | sudo bash
 sudo dpkg --add-architecture i386
 sudo mkdir -pm755 /etc/apt/keyrings
 sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
@@ -32,23 +31,6 @@ echo 'Defaults !pwfeedback'|sudo tee /etc/sudoers.d/9_no_pwfeedback
 sudo apt install winehq-staging -y
 sudo -v
 rm -rf ~/snap
-distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
-
-wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
-
-sudo tee /etc/apt/sources.list.d/librewolf.sources << EOF > /dev/null
-Types: deb
-URIs: https://deb.librewolf.net
-Suites: $distro
-Components: main
-Architectures: amd64
-Signed-By: /usr/share/keyrings/librewolf.gpg
-EOF
-sudo apt update -y
-
-sudo apt install librewolf -y
-sudo apt update -y
-
 
 mkdir zig
 cd zig
@@ -60,7 +42,7 @@ wget https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz
  cd -
 
 
-flatpak install -y --noninteractive flathub com.chatterino.chatterino/x86_64/nightly librewolf io.github.shiftey.Desktop
+flatpak install -y --noninteractive flathub com.chatterino.chatterino/x86_64/nightly librewolf io.github.shiftey.Desktop jellyfin
 sudo mv streamlink.desktop /usr/share/applications
 sudo mv *.png /usr/share/icons
 sudo mkdir -p /usr/local/bin
