@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-./dwmlrmvpkgs.sh
 sudo rm -rf /usr/share/xsessions/*
 sudo wget -p /usr/share/fonts/Iosevka
 sudo wget  https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz --directory-prefix=/usr/share/fonts/Iosevka
@@ -80,4 +79,5 @@ sudo zig build installsystemd
 sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
 cd -
+./dwmlrmvpkgs.sh
 sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
