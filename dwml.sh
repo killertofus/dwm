@@ -8,8 +8,8 @@ sudo mv /etc/sudoers.d/0pwfeedback /etc/sudoers.d/0pwfeedback.disabled
 sudo apt update -y
 sudo apt purge '*language-*' -y
 xargs sudo apt install <dwmlpkgs.txt -y
-chsh -s $(which zsh)
 fc-cache -f -v
+chsh -s $(which zsh)
 sudo systemctl enable libvirtd
 sudo adduser $USER libvirt
 sudo adduser $USER kvm
