@@ -7,6 +7,8 @@ sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.m
 sudo mv /etc/sudoers.d/0pwfeedback /etc/sudoers.d/0pwfeedback.disabled 
 sudo apt update -y
 xargs sudo apt install <dwmlpkgs.txt -y
+chsh -s $(which zsh)
+fc-cache -f -v
 sudo systemctl enable libvirtd
 sudo adduser $USER libvirt
 sudo adduser $USER kvm
@@ -29,8 +31,6 @@ sudo -v
 echo 'Defaults !pwfeedback'|sudo tee /etc/sudoers.d/9_no_pwfeedback
 sudo apt install winehq-staging -y
 sudo -v
-chsh -s $(which zsh)
-fc-cache -f -v
 rm -rf ~/snap
 distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
