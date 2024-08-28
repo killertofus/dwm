@@ -60,11 +60,9 @@ wget https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz
  cd -
 
 
-
+flatpak install -y --noninteractive flathub com.chatterino.chatterino/x86_64/nightly com.rustdesk.RustDesk
 
 sudo mv streamlink.desktop /usr/share/applications
-sudo mv chatterino.desktop /usr/share/applications
-sudo mv rustdesk.desktop /usr/share/applications
 sudo mv *.png /usr/share/icons
 sudo mkdir -p /usr/local/bin
 
@@ -76,28 +74,9 @@ curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/l
 | wget -qi -
 
  mv *.AppImage Streamlink_Twitch_GUI
- 
 
-
-
-
-curl -s https://api.github.com/repos/Chatterino/chatterino2/releases/latest \
-| grep "x86_64.*AppImage" \
-| cut -d : -f 2,3 \
-| tr -d \" \
-| wget -qi -
- mv *.AppImage Chatterino
-
-
-curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest \
-| grep "x86_64.*AppImage" \
-| cut -d : -f 2,3 \
-| tr -d \" \
-| wget -qi -
- 
- mv *.AppImage rustdesk
  find ./  -regextype posix-egrep -regex '.*{3,5}.*' -print0 | xargs -0 chmod +x
-sudo mv rustdesk Chatterino Streamlink_Twitch_GUI /usr/local/bin
+sudo mv Streamlink_Twitch_GUI /usr/local/bin
 
 
 wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/shiftkey-packages.gpg > /dev/null
