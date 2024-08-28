@@ -6,6 +6,7 @@ sudo tar -xvf /usr/share/fonts/Iosevka/Iosevka.tar.xz -C /usr/share/fonts/Iosevk
 sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.md
 sudo mv /etc/sudoers.d/0pwfeedback /etc/sudoers.d/0pwfeedback.disabled 
 sudo apt update -y
+sudo apt purge '*language-*' -y
 xargs sudo apt install <dwmlpkgs.txt -y
 chsh -s $(which zsh)
 fc-cache -f -v
