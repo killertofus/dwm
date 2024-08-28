@@ -9,11 +9,11 @@ sudo apt update -y
 sudo apt purge '*language-*' -y
 xargs sudo apt install <dwmlpkgs.txt -y
 fc-cache -f -v
-sudo chsh -s $(which zsh)
 sudo systemctl enable libvirtd
 sudo adduser $USER libvirt
 sudo adduser $USER kvm
 sudo -v
+sudo chsh -s $(which zsh)
 sudo dpkg --add-architecture i386
 sudo mkdir -pm755 /etc/apt/keyrings
 sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
