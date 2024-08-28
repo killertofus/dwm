@@ -68,7 +68,7 @@ curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest \
 
  mv *.AppImage rustdesk
  find ./  -regextype posix-egrep -regex '.*{3,5}.*' -print0 | xargs -0 chmod +x
-sudo mv Streamlink_Twitch_GUI /usr/local/bin
+sudo mv  rustdesk Streamlink_Twitch_GUI /usr/local/bin
 
 sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
 ./gwml.sh
