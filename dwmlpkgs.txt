@@ -1,5 +1,6 @@
 alacritty
 apt-transport-https
+awesome
 blueman
 bluez
 btop
@@ -13,6 +14,7 @@ default-jdk
 dunst
 feh
 firefox
+flatpak
 flameshot
 fonts-dejavu
 fonts-hack
@@ -26,10 +28,7 @@ gnome-disk-utility
 gnupg
 hicolor-icon-theme
 libpam0g-dev
-libx11-dev
 libxcb-xkb-dev
-libxft-dev
-libxinerama-dev
 lsb-release
 lsd
 lxappearance
@@ -61,6 +60,5 @@ volumeicon-alsa
 w3m
 wget
 xarchiver
-xdotool
 xscreensaver
 zsh
