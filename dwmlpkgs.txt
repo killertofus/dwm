@@ -29,8 +29,6 @@ gnupg
 hicolor-icon-theme
 libpam0g-dev
 libxcb-xkb-dev
-libxft-dev
-libxinerama-dev
 lsb-release
 lsd
 lxappearance
