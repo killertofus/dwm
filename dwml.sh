@@ -7,6 +7,7 @@ sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.m
 sudo mv /etc/sudoers.d/0pwfeedback /etc/sudoers.d/0pwfeedback.disabled
 sudo apt update
 sudo -v
+sudo apt purge '*language-*' -y
 xargs sudo apt install <dwmlpkgs.txt -y
 sudo systemctl enable libvirtd
 sudo adduser $USER libvirt
