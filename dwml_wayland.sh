@@ -8,6 +8,7 @@ sed -i 's/feh/wayland-protocols/g' dwmlpkgs.txt
 sed -i 's/xscreensaver/libwayland-cursor++1 liblz4-dev libwayland-bin libinput-dev libwayland-dev libwlroots-dev/g' dwmlpkgs.txt
 sed -i 's/volumeicon-alsa/waybar/g' dwmlpkgs.txt
 sed -i 's/lxappearance/nwg-look/g' dwmlpkgs.txt
+sudo mkdir -p /usr/share/wayland-sessions
 sudo rm -rf /usr/share/xsessions/*
 sudo wget -p /usr/share/fonts/Iosevka
 sudo wget  https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Iosevka.tar.xz --directory-prefix=/usr/share/fonts/Iosevka
