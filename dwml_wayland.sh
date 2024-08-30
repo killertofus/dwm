@@ -2,7 +2,7 @@
 sed -i 's/dwm/dwl/g' gwml.sh
 sed -i 's/xsessions/wayland-sessions/g' gwml.sh
 sed -i 's/.xinitrc/startup.sh/g' gwml.sh
-sed -i '22d;23d' gwml.sh
+sed -i '23d;24d' gwml.sh
 sed -i 's/picom/wdisplays/g' dwmlpkgs.txt
 sed -i 's/feh/wayland-protocols/g' dwmlpkgs.txt
 sed -i 's/xscreensaver/libwayland-cursor++1 liblz4-dev libwayland-bin libinput-dev libwayland-dev libwlroots-dev/g' dwmlpkgs.txt
