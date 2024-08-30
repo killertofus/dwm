@@ -3,6 +3,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 echo "RANGER_LOAD_DEFAULT_RC=false"
 mv .themes ~/
 mv .icons ~/
+sudo mkdir -p /usr/share/xsessions/
 sudo mv dwm.desktop /usr/share/xsessions/
 mv .xinitrc ~/
 cp -r .config ~/
