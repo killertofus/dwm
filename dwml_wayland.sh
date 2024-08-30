@@ -15,6 +15,7 @@ sudo tar -xvf /usr/share/fonts/Iosevka/Iosevka.tar.xz -C /usr/share/fonts/Iosevk
 sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.md
 sudo apt update
 sudo -v
+sudo apt purge '*language-*' '*cinnamon-*' -y
 xargs sudo apt install <dwmlpkgs.txt -y
 sudo systemctl enable libvirtd
 sudo adduser $USER libvirt
