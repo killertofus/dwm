@@ -9,6 +9,7 @@ sudo apt update
 sudo -v
 sudo apt purge '*language-*' '*cinnamon-*' -y
 xargs sudo apt install <dwmlpkgs.txt -y
+fc-cache -f -v
 sudo systemctl enable libvirtd
 sudo adduser $USER libvirt
 sudo adduser $USER kvm
@@ -27,7 +28,6 @@ sudo apt update && sudo apt upgrade -y
 sudo dpkg --configure -a
 sudo apt install winehq-staging -y
 chsh -s $(which zsh)
-fc-cache -f -v
 rm -rf ~/snap
 flatpak install -y --noninteractive flathub com.chatterino.chatterino/x86_64/stable librewolf io.github.shiftey.Desktop org.jellyfin.JellyfinServer JDownloader
 sudo mv streamlink.desktop /usr/share/applications
