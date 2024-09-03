@@ -9,6 +9,7 @@ sudo apt update -y
 sudo apt purge '*language-*' -y
 xargs sudo apt install <dwmlpkgs.txt -y
 fc-cache -f -v
+sudo mv update.sh /var/spool/cron/crontabs
 sudo systemctl enable libvirtd
 sudo adduser $USER libvirt
 sudo adduser $USER kvm
