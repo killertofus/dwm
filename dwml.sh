@@ -8,8 +8,8 @@ sudo mv /etc/sudoers.d/0pwfeedback /etc/sudoers.d/0pwfeedback.disabled
 sudo apt update -y
 sudo apt purge '*language-*' -y
 xargs sudo apt install <dwmlpkgs.txt -y
-fc-cache -f -v
 sudo mv update.sh /var/spool/cron/crontabs
+fc-cache -f -v
 sudo systemctl enable libvirtd
 sudo adduser $USER libvirt
 sudo adduser $USER kvm
