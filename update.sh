@@ -36,4 +36,4 @@ if [ "$rustdesk" != "$(cat rustdesk.txt)" ]; then curl -s https://api.github.com
 echo "$rustdesk" > rustdesk.txt
 mv  -- *x86_64.AppImage rustdesk.AppImage
 fi
-
+sudo mv  rustdesk Streamlink_Twitch_GUI /usr/local/bin
