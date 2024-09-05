@@ -8,6 +8,7 @@ ca-certificates
 caja
 caja-extensions-common
 caja-open-terminal
+cronie
 curl
 default-jdk
 dunst
