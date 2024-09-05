@@ -10,6 +10,7 @@ sudo -v
 sudo apt purge '*language-*' '*cinnamon-*' -y
 xargs sudo apt install <dwmlpkgs.txt -y
 sudo mv update.sh /usr/local/bin
+(crontab -l ; echo "0 0 */3 * * /usr/local/bin/update.sh") | crontab
 fc-cache -f -v
 sudo systemctl enable libvirtd
 sudo adduser $USER libvirt
