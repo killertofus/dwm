@@ -33,6 +33,7 @@ libxft-dev
 libxinerama-dev
 lsb-release
 lsd
+librewolf
 lxappearance
 neofetch
 neovim
