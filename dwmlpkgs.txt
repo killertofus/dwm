@@ -32,6 +32,7 @@ libpam0g-dev
 libxcb-xkb-dev
 lsb-release
 lsd
+librewolf
 lxappearance
 neofetch
 neovim
