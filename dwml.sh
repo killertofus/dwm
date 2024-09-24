@@ -30,7 +30,6 @@ sudo apt update && sudo apt upgrade -y
 sudo dpkg --configure -a
 sudo apt install winehq-staging -y
 chsh -s $(which zsh)
-rm -rf ~/snap
 flatpak install -y --noninteractive flathub com.chatterino.chatterino/x86_64/stable io.github.shiftey.Desktop org.jellyfin.JellyfinServer JDownloader
 sudo mv streamlink.desktop /usr/share/applications
 sudo mv rustdesk.desktop /usr/share/applications
