@@ -8,6 +8,7 @@ mv .icons ~/
 mv .dircolors ~/
 sudo mv awesome.desktop /usr/share/xsessions/
 mv .xinitrc ~/
+gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
