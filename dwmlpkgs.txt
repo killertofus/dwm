@@ -6,9 +6,6 @@ bluez
 btop
 build-essential
 ca-certificates
-caja
-caja-extensions-common
-caja-open-terminal
 curl
 cron
 default-jdk
@@ -36,6 +33,7 @@ librewolf
 lxappearance
 neofetch
 neovim
+nemo
 nodejs
 obs-studio
 openssh-client
