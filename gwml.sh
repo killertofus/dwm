@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 echo "RANGER_LOAD_DEFAULT_RC=false"
-mv .themes ~/
+mv themes ~/
 cp -r .config ~/
-mv .icons ~/
+mv icons ~/
 mv .zshrc ~/
 mv .dircolors ~/
 sudo mkdir -p /usr/share/xsessions
