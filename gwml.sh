@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 echo "RANGER_LOAD_DEFAULT_RC=false"
-mv .themes ~/
+mv themes ~/.local/share
 cp -r .config ~/
 mv .zshrc ~/
-mv .icons ~/
+mv icons ~/.local/share
 mv .dircolors ~/
 sudo mv awesome.desktop /usr/share/xsessions/
 mv .xinitrc ~/
@@ -17,3 +17,7 @@ unzip master.zip
 mv zsh-master/lib zsh-master/dracula.zsh-theme ~/.oh-my-zsh/themes
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ~/.config/tmux/plugins/tpm/scripts/install_plugins.sh
+export ZSH="$XDG_DATA_HOME"/oh-my-zsh
+export WINEPREFIX="$XDG_DATA_HOME"/wine
+export HISTFILE="$XDG_STATE_HOME"/zsh/history
+export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
