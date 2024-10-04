@@ -30,10 +30,9 @@ main
 sudo apt update && sudo apt upgrade -y
 sudo dpkg --configure -a
 sudo -v
-sudo apt install winehq-staging -y
 sudo -v
 rm -rf ~/snap
-
+cargo install --locked yazi-fm yazi-cli
 mkdir zig
 cd zig
 wget https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz
