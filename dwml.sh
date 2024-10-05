@@ -27,11 +27,7 @@ main() {
 }
 
 main
-sudo apt update && sudo apt upgrade -y
-sudo dpkg --configure -a
 sudo -v
-sudo -v
-rm -rf ~/snap
 git clone https://github.com/sxyazi/yazi.git
 cargo build --release --locked --manifest-path=yazi/Cargo.toml
 mkdir zig
