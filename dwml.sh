@@ -33,7 +33,7 @@ sudo -v
 sudo -v
 rm -rf ~/snap
 git clone https://github.com/sxyazi/yazi.git
-cargo build --release --locked- --manifest-path=yazi/Cargo.toml
+cargo build --release --locked --manifest-path=yazi/Cargo.toml
 mkdir zig
 cd zig
 wget https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz
