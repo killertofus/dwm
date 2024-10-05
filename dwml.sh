@@ -50,7 +50,7 @@ sudo install lazygit /usr/local/bin
 
 
 
-flatpak install -y --noninteractive flathub com.chatterino.chatterino/x86_64/stable io.github.shiftey.Desktop org.jellyfin.JellyfinServer JDownloader
+flatpak install -y --noninteractive flathub com.chatterino.chatterino/x86_64/stable org.jellyfin.JellyfinServer JDownloader
 sudo mv streamlink.desktop /usr/share/applications
 sudo mv rustdesk.desktop /usr/share/applications
 sudo mv *.png /usr/share/icons
