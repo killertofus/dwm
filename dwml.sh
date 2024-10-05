@@ -29,7 +29,7 @@ main() {
 main
 sudo -v
 sudo apt update
-sudo apt install --install-recommends winehq-staging
+sudo apt install --install-recommends winehq-staging -y
 git clone https://github.com/sxyazi/yazi.git
 cargo build --release --locked --manifest-path=yazi/Cargo.toml
 mkdir zig
@@ -75,7 +75,6 @@ curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest \
  find ./  -regextype posix-egrep -regex '.*{3,5}.*' -print0 | xargs -0 chmod +x
 sudo mv  rustdesk Streamlink_Twitch_GUI /usr/local/bin
 
-sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
 ./gwml.sh
 nvim > /dev/null 2>&1 &
 git clone --recurse-submodules https://github.com/fairyglade/ly
@@ -84,6 +83,5 @@ sudo zig build installsystemd
 sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
 cd -
-./dwmlrmvpkgs.sh -y 
-sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove && sudo apt install nemo -y
+./dwmlrmvpkgs.sh -y && sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove && sudo apt install nemo -y
 rm -rf $(pwd)

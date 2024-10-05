@@ -22,3 +22,4 @@ export ZSH="$XDG_DATA_HOME"/oh-my-zsh
 export WINEPREFIX="$XDG_DATA_HOME"/wine
 export HISTFILE="$XDG_STATE_HOME"/zsh/history
 export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
+export XCURSOR_PATH=${XCURSOR_PATH}:~/.local/share/icons
