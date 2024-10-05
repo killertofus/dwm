@@ -29,7 +29,7 @@ main() {
 main
 sudo -v
 sudo apt update
-sudo apt install --install-recommends winehq-stable
+sudo apt install --install-recommends winehq-staging
 git clone https://github.com/sxyazi/yazi.git
 cargo build --release --locked --manifest-path=yazi/Cargo.toml
 mkdir zig
@@ -84,5 +84,6 @@ sudo zig build installsystemd
 sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
 cd -
-./dwmlrmvpkgs.sh -y && sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove && sudo apt install nemo -y
+./dwmlrmvpkgs.sh -y 
+sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove && sudo apt install nemo -y
 rm -rf $(pwd)
