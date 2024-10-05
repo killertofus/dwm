@@ -28,6 +28,7 @@ main() {
 
 main
 sudo -v
+sudo apt update
 sudo apt install --install-recommends winehq-stable
 git clone https://github.com/sxyazi/yazi.git
 cargo build --release --locked --manifest-path=yazi/Cargo.toml

@@ -21,6 +21,7 @@ fonts-liberation
 fonts-noto-core
 fonts-powerline
 fonts-symbola
+fzf
 git
 gnome-disk-utility
 gnupg
