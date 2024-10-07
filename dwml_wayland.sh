@@ -16,7 +16,7 @@ sudo tar -xvf /usr/share/fonts/Iosevka/Iosevka.tar.xz -C /usr/share/fonts/Iosevk
 sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.md
 sudo apt update
 sudo -v
-sudo apt purge '*language-*' '*cinnamon-*' -y
+sudo apt purge '*language-*' -y
 xargs sudo apt install <dwmlpkgs.txt -y
 sudo mv update.sh /usr/local/bin
 fc-cache -f -v
@@ -34,16 +34,18 @@ main() {
 }
 
 main
-sudo apt update && sudo apt upgrade -y
-sudo dpkg --configure -a
+sudo apt update
 sudo apt install winehq-staging -y
 chsh -s $(which zsh)
-rm -rf ~/snap
-flatpak install -y --noninteractive flathub com.chatterino.chatterino/x86_64/stable librewolf io.github.shiftey.Desktop org.jellyfin.JellyfinServer JDownloader
+flatpak install -y --noninteractive flathub com.chatterino.chatterino/x86_64/stable org.jellyfin.JellyfinServer JDownloader
 sudo mv streamlink.desktop /usr/share/applications
 sudo mv rustdesk.desktop /usr/share/applications
 sudo mv *.png /usr/share/icons
 sudo mkdir -p /usr/local/bin
+
+
+git clone https://github.com/sxyazi/yazi.git
+cargo build --release --locked --manifest-path=yazi/Cargo.toml
 
 
 mkdir zig
@@ -54,6 +56,11 @@ wget https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz
  mv * zig
  sudo mv zig/lib zig/zig /usr/local/bin
  cd -
+
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit /usr/local/bin
 
 
 
@@ -77,7 +84,6 @@ curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest \
 sudo mv rustdesk Streamlink_Twitch_GUI /usr/local/bin
 
 
-sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
 ./gwml.sh
 nvim > /dev/null 2>&1 &
 git clone --recurse-submodules https://github.com/fairyglade/ly
@@ -87,6 +93,5 @@ sudo zig build installsystemd
 sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
 cd -
-./dwmlrmvpkgs.sh
-sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove -y
+./dwmlrmvpkgs.sh -y && sudo apt update && sudo apt upgrade -y && sudo apt clean && sudo apt autoclean && sudo apt autoremove && sudo apt install nemo -y
 rm -rf $(pwd)

@@ -12,6 +12,7 @@ dunst
 feh
 firefox
 flatpak
+fzf
 flameshot
 fonts-dejavu
 fonts-hack
@@ -44,7 +45,6 @@ policykit-1-gnome
 powerline
 python3-libtmux
 qbittorrent
-ranger
 ripgrep
 rofi
 rust-all
@@ -63,3 +63,5 @@ wget
 xarchiver
 xscreensaver
 zsh
+zathura
+zathura-pdf-poppler
