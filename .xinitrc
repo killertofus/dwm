@@ -55,6 +55,5 @@ volumeicon &
 /opt/piavpn/bin/pia-client %u &
 picom -b &
 flameshot &
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 dunst &
 exec awesome
