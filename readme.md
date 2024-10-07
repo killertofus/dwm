@@ -1,10 +1,10 @@
 # mint version
 
-mod key is super and rofi is left alt
+mod key is alt, super is rofi
 
 
 
-git clone  -b mint https://github.com/killertofus/awesome/ 
+git clone -b dw-mint https://github.com/killertofus/awesome/ 
 
 cd awesome 
 
