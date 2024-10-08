@@ -7,7 +7,7 @@ sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.m
 sudo mv /etc/sudoers.d/0pwfeedback /etc/sudoers.d/0pwfeedback.disabled 
 sudo apt update -y
 sudo apt purge '*language-*' -y
-xargs sudo apt install <dwmlpkgs.txt -y
+xargs sudo apt install < dwmlpkgs.txt -y
 sudo mv update.sh /usr/local/bin
 (crontab -l ; echo "0 0 */3 * * /usr/local/bin/update.sh") | crontab
 fc-cache -f -v
