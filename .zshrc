@@ -94,8 +94,7 @@ source $ZSH/oh-my-zsh.sh
 #exports here
 export DRACULA_ARROW_ICON="❯"
 export EDITOR=nvim
-
-
+export BAT_THEME=Dracula
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
