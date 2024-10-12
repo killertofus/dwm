@@ -93,7 +93,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 #exports here
-
+export DRACULA_ARROW_ICON="❯"
 export EDITOR=nvim
 
 
@@ -106,6 +106,7 @@ export EDITOR=nvim
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 alias ls="lsd -a"
+alias update="sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove"
 alias lz="lazygit"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 autoload -U colors && colors
