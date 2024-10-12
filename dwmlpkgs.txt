@@ -1,6 +1,7 @@
 alacritty
 apt-transport-https
 awesome
+bat
 blueman
 bluez
 btop
