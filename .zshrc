@@ -106,6 +106,7 @@ export EDITOR=nvim
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 alias ls="lsd -a"
+alias cat="bat"
 alias update="sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove"
 alias lz="lazygit"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
