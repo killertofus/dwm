@@ -92,7 +92,6 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 #exports here
-
 export DRACULA_ARROW_ICON="❯"
 export EDITOR=nvim
 
