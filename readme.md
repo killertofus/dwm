@@ -8,12 +8,11 @@ git clone -b dw-mint https://github.com/killertofus/awesome/
 
 cd awesome 
 
-read dwml script 
+read install.sh/install_wayland script 
 
-read dwmlrmvpkgs.sh 
 
-remove anything you want to keep in dwmlrmvpkgs 
+remove anything you want to keep in remove_packages.txt 
 
-remove any packages you don't want in dwmlpkgs.txt then ./dwml.sh
+remove any packages you don't want in packages.txt then ./install.sh/install_wayland.sh
 
 reboot

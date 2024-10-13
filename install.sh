@@ -8,7 +8,7 @@ sudo mv /etc/sudoers.d/0pwfeedback /etc/sudoers.d/0pwfeedback.disabled
 sudo apt update
 sudo -v
 sudo apt purge '*language-*' -y
-xargs sudo apt install <dwmlpkgs.txt -y
+xargs sudo apt install <packages.txt -y
 sudo mv update.sh /usr/local/bin
 (crontab -l ; echo "0 0 */3 * * /usr/local/bin/update.sh") | crontab
 fc-cache -f -v
@@ -75,7 +75,7 @@ curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest \
 sudo mv rustdesk Streamlink_Twitch_GUI /usr/local/bin
 
 
-./gwml.sh
+./configs.sh
 nvim > /dev/null 2>&1 &
 git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
@@ -84,5 +84,5 @@ sudo zig build installsystemd
 sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
 cd -
-./dwmlrmvpkgs.sh -y && sudo apt update && sudo apt upgrade -y && sudo apt clean && sudo apt autoclean && sudo apt autoremove && sudo apt install nemo -y
+xargs sudo apt purge < remove_packages.txt && sudo apt update && sudo apt upgrade -y && sudo apt clean && sudo apt autoclean && sudo apt autoremove && sudo apt install nemo -y
 rm -rf $(pwd)
