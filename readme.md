@@ -6,12 +6,12 @@ git clone  -b mint https://github.com/killertofus/awesome/
 
 cd awesome 
 
-read dwml script 
+read install.sh 
 
-read dwmlrmvpkgs.sh 
+read remove_packages.txt 
 
-remove anything you want to keep in dwmlrmvpkgs 
+remove anything you want to keep in remove_packages.txt 
 
-remove any packages you don't want in dwmlpkgs.txt then ./dwml.sh
+remove any packages you don't want in packages.txt then ./install.sh
 
 reboot

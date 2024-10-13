@@ -7,7 +7,7 @@ sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.m
 sudo mv /etc/sudoers.d/0pwfeedback /etc/sudoers.d/0pwfeedback.disabled 
 sudo apt update
 sudo apt purge '*language-*' -y
-xargs sudo apt install < dwmlpkgs.txt -y
+xargs sudo apt install < packages.txt -y
 sudo mv update.sh /usr/local/bin
 (crontab -l ; echo "0 0 */3 * * /usr/local/bin/update.sh") | crontab
 fc-cache -f -v
@@ -75,7 +75,7 @@ curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest \
  find ./  -regextype posix-egrep -regex '.*{3,5}.*' -print0 | xargs -0 chmod +x
 sudo mv  rustdesk Streamlink_Twitch_GUI /usr/local/bin
 
-./gwml.sh
+./configs.sh
 nvim > /dev/null 2>&1 &
 git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
