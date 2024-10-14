@@ -8,7 +8,7 @@ sudo mv /etc/sudoers.d/0pwfeedback /etc/sudoers.d/0pwfeedback.disabled
 sudo apt update
 sudo -v
 sudo apt purge '*language-*' -y
-xargs sudo apt install <packages.txt -y
+xargs sudo apt install < packages.txt -y
 sudo mv update.sh /usr/local/bin
 (crontab -l ; echo "0 0 */3 * * /usr/local/bin/update.sh") | crontab
 fc-cache -f -v
