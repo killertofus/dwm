@@ -11,7 +11,7 @@ sudo apt purge '*language-*' -y
 xargs sudo apt install < packages.txt -y
 sudo mv update.sh /usr/local/bin
 (crontab -l ; echo "0 0 */3 * * /usr/local/bin/update.sh") | crontab
-fc-cache -f -v
+fc-cache -fv
 sudo systemctl enable libvirtd
 sudo adduser $USER libvirt
 sudo adduser $USER kvm
