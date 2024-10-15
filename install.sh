@@ -38,6 +38,7 @@ sudo mkdir -p /usr/local/bin
 sudo -v
 git clone https://github.com/sxyazi/yazi.git
 cargo build --release --locked --manifest-path=yazi/Cargo.toml
+sudo mv yazi/target/release/yazi yazi/target/release/ya /usr/local/bin
 mkdir zig
 cd zig
 wget https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz
