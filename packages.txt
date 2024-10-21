@@ -18,7 +18,6 @@ flameshot
 fonts-hack
 fonts-jetbrains-mono
 fonts-noto-core
-fonts-powerline
 fzf
 git
 gnome-disk-utility
@@ -39,7 +38,6 @@ openssh-client
 pavucontrol
 picom
 policykit-1-gnome
-powerline
 python3-libtmux
 qbittorrent
 ranger
