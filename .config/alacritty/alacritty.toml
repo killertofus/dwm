@@ -26,10 +26,27 @@ foreground = "#f8f8f2"
 LANG = "en_US.UTF-8"
 LC_CTYPE = "en_US.UTF-8"
 TERM = "xterm-256color"
+[window]
+  opacity= 0.8
 
 [font]
-size = 11.0
+size = 12
 
-[font.normal]
-family = "monospace"
-style = "Regular"
+  [font.bold]
+  family = "JetBrainsMono Nerd Font"
+  style = "Bold"
+
+  [font.glyph_offset]
+  x = 0
+  y = 0
+
+  [font.italic]
+  family = "JetBrainsMono Nerd Font"
+
+  [font.normal]
+  family = "JetBrainsMono Nerd Font"
+  style = "Regular"
+
+  [font.offset]
+  x = 0
+  y = 0
