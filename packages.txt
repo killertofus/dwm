@@ -15,13 +15,10 @@ feh
 firefox
 flatpak
 flameshot
-fonts-dejavu
 fonts-hack
-fonts-ibm-plex
-fonts-liberation
+fonts-jetbrains-mono
 fonts-noto-core
 fonts-powerline
-fonts-symbola
 fzf
 git
 gnome-disk-utility
