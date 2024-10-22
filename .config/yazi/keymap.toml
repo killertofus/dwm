@@ -8,6 +8,20 @@ on   = "!"
 run  = 'shell "$SHELL" --block --confirm'
 desc = "Open"
 
+[[manager.prepend_keymap]]
+on   = "Q"
+run  = ".."
+desc = "do nothing"
+
+[[manager.prepend_keymap]]
+on   = "q"
+run  = "."
+desc = "do nothing"
+
+[[manager.prepend_keymap]]
+on   = "<F2>"
+run  = "quit"
+desc = "quit"
 
 [[manager.prepend_keymap]]
 on   = "/"
