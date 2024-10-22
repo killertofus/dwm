@@ -16,6 +16,7 @@ gucharmap
 hexchat 
 hexchat-common 
 hypnotix 
+lightdm-settings
 mint-upgrade-info
 mintwelcome
 mintinstall
