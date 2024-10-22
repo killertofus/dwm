@@ -40,7 +40,6 @@ picom
 policykit-1-gnome
 python3-libtmux
 qbittorrent
-ranger
 ripgrep
 rofi
 rust-all
