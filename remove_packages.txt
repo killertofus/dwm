@@ -12,14 +12,18 @@ gnome-terminal
 gnome-system-monitor 
 gnome-screenshot-
 gnome-online-accounts-
+gucharmap
 hexchat 
 hexchat-common 
 hypnotix 
 mint-upgrade-info
 mintwelcome
+mintinstall
+mintstick
 mintreport 
 mintdrivers
 mintbackup
+mintlocale
 nano 
 orca 
 onboard-
@@ -35,6 +39,7 @@ transmission
 thunderbird-
 transmission-common 
 vim-common 
+virt-viewer
 vim-tiny 
 warpinator 
 webapp-manager 
