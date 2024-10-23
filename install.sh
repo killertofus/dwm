@@ -69,15 +69,7 @@ curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/l
  mv *.AppImage Streamlink_Twitch_GUI
 
 
-curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest \
-| grep "x86_64.*AppImage" \
-| cut -d : -f 2,3 \
-| tr -d \" \
-| wget -qi -
-
- mv *.AppImage rustdesk
  find ./  -regextype posix-egrep -regex '.*{3,5}.*' -print0 | xargs -0 chmod +x
-sudo mv rustdesk Streamlink_Twitch_GUI /usr/local/bin
 
 
 ./configs.sh

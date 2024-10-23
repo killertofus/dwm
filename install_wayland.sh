@@ -42,7 +42,7 @@ main
 sudo apt update
 sudo apt install winehq-staging -y
 chsh -s $(which zsh)
-flatpak install -y --noninteractive flathub com.chatterino.chatterino/x86_64/stable org.jellyfin.JellyfinServer JDownloader
+flatpak install -y --noninteractive flathub com.chatterino.chatterino/x86_64/stable org.jellyfin.JellyfinServer JDownloader rustdesk
 sudo mv streamlink.desktop /usr/share/applications
 sudo mv rustdesk.desktop /usr/share/applications
 sudo mv *.png /usr/share/icons
@@ -78,15 +78,7 @@ curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/l
  mv *.AppImage Streamlink_Twitch_GUI
 
 
-curl -s https://api.github.com/repos/rustdesk/rustdesk/releases/latest \
-| grep "x86_64.*AppImage" \
-| cut -d : -f 2,3 \
-| tr -d \" \
-| wget -qi -
-
- mv *.AppImage rustdesk
  find ./  -regextype posix-egrep -regex '.*{3,5}.*' -print0 | xargs -0 chmod +x
-sudo mv rustdesk Streamlink_Twitch_GUI /usr/local/bin
 
 
 ./gwml.sh
