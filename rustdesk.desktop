@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Icon=/usr/share/icons/rustdesk.png
-Name=rustdesk
-Exec=/usr/local/bin/rustdesk
-Terminal=false
-Hidden=false
