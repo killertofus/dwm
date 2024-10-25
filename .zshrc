@@ -16,7 +16,7 @@ export EDITOR=nvim
 
 #alias here
 alias ls="lsd -a"
-alias cat="bat"
+alias cat="batcat"
 alias lz="lazygit"
 alias fzf="fzf --preview "bat --color=always --style=numbers --line-range=:500 {}""
 alias update="sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoclean && sudo apt autoremove"
