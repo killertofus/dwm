@@ -13,7 +13,7 @@ sudo apt purge '*language-*' -y
 xargs sudo apt install < packages.txt -y
 sudo mv update.sh /usr/local/bin
 (crontab -l ; echo "0 0 */3 * * /usr/local/bin/update.sh") | crontab
-fc-cache -fv
+fc-cache -f
 sudo systemctl enable libvirtd
 sudo adduser $USER libvirt
 sudo adduser $USER kvm
@@ -54,7 +54,6 @@ sudo install lazygit /usr/local/bin
 
 flatpak install -y --noninteractive flathub com.chatterino.chatterino/x86_64/stable org.jellyfin.JellyfinServer JDownloader rustdesk
 sudo mv streamlink.desktop /usr/share/applications
-sudo mv rustdesk.desktop /usr/share/applications
 sudo mv *.png /usr/share/icons
 sudo mkdir -p /usr/local/bin
 
