@@ -24,7 +24,7 @@ sudo -v
 sudo apt purge '*language-*' -y
 xargs sudo apt install <dwmlpkgs.txt -y
 sudo mv update.sh /usr/local/bin
-fc-cache -f -v
+fc-cache -f
 sudo systemctl enable libvirtd
 sudo adduser $USER libvirt
 sudo adduser $USER kvm
