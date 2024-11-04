@@ -1,5 +1,5 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = ','
+vim.g.maplocalleader = ','
 vim.g.have_nerd_font = true
 vim.opt.number = true
 vim.opt.termguicolors = true
@@ -41,7 +41,7 @@ vim.cmd [[
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+  group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
   callback = function()
     vim.highlight.on_yank()
   end,
@@ -74,9 +74,68 @@ local plugins =
 
 
 
+
+
+{'tpope/vim-sleuth'},
+{ 'Bilal2453/luvit-meta', lazy = true },
+{'ap/vim-css-color'},
+
+
+
+
+
+
+
+
+{
+  'saghen/blink.cmp',
+  lazy = false,
+
+  dependencies = 'rafamadriz/friendly-snippets',
+
+   version = 'v0.*',
+   opts = {
+
+    keymap = { preset = 'super-tab' },
+
+    highlight = {
+      use_nvim_cmp_as_default = true,
+    },
+       nerd_font_variant = 'mono',
+
+
+  }
+},
+
+
+
+{
+  'neovim/nvim-lspconfig',
+  dependencies = { 'saghen/blink.cmp' },
+  config = function(_, opts)
+    local lspconfig = require('lspconfig')
+    for server, config in pairs(opts.servers) do
+      config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
+      lspconfig[server].setup(config)
+    end
+  end
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   "roobert/tailwindcss-colorizer-cmp.nvim",
-  -- optionally, override the default options:
+
   config = function()
     require("tailwindcss-colorizer-cmp").setup({
       color_square_width = 2,
@@ -95,7 +154,6 @@ local plugins =
     config = function()
       require("sniprun").setup({
 	      display = {"NvimNotify"},
-       --your options
       })
     end,
   },
@@ -127,8 +185,8 @@ local plugins =
 
 {
     "OXY2DEV/markview.nvim",
-    lazy = false,      -- Recommended
-    -- ft = "markdown" -- If you decide to lazy-load anyway
+    lazy = false,
+
 
     dependencies = {
         "nvim-treesitter/nvim-treesitter",
@@ -142,7 +200,6 @@ local plugins =
 {
     "rolv-apneseth/tfm.nvim",
     config = function()
-        -- Set keymap so you can open the default terminal file manager (yazi)
         vim.api.nvim_set_keymap("n", "<C-t>", "", {
             noremap = true,
             callback = require("tfm").open,
@@ -160,11 +217,9 @@ local plugins =
 
 {
   "lervag/vimtex",
-  lazy = false,     -- we don't want to lazy load VimTeX
-  -- tag = "v2.15", -- uncomment to pin to a specific release
+  lazy = false,
   init = function()
-    -- VimTeX configuration goes here, e.g.
-    vim.g.vimtex_view_method = "zathura"
+      vim.g.vimtex_view_method = "zathura"
   end
 },
 
@@ -176,14 +231,9 @@ local plugins =
 {"folke/noice.nvim",
 	event = "VeryLazy",
   opts = {
-    -- add any options here
   },
   dependencies = {
-    -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-    "MunifTanjim/nui.nvim",
-    -- OPTIONAL:
-    --   `nvim-notify` is only needed, if you want to use the notification view.
-    --   If not available, we use `mini` as the fallback
+       "MunifTanjim/nui.nvim",
     "rcarriga/nvim-notify",
     },
 
@@ -215,6 +265,10 @@ require("lazy").setup(plugins, opts)
 vim.o.inccommand = "split"
 
 
+
+
+
+
 require('lualine').setup { 
 options = { theme = 'dracula' 
 }
@@ -222,9 +276,9 @@ options = { theme = 'dracula'
 
 
 
+
+
 -- KeyBindings
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<C-r>', '<Cmd>SnipRun<CR>')
-
-
 vim.keymap.set('n','/', builtin.live_grep, { desc = 'Telescope live grep' })
