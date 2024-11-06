@@ -5,15 +5,12 @@ mv themes ~/.local/share
 cp -r .config ~/
 mv icons ~/.local/share
 mv .zshrc ~/
-mv .dircolors ~/
 sudo mkdir -p /usr/share/xsessions
 sudo mv dwm.desktop /usr/share/xsessions/
 mv .xinitrc ~/
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
 gsettings set org.nemo.preferences show-hidden-files-true
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 wget https://github.com/dracula/zsh/archive/master.zip
 unzip master.zip
 mv zsh-master/lib zsh-master/dracula.zsh-theme ~/.oh-my-zsh/themes
