@@ -4,7 +4,6 @@ mv themes ~/.local/share
 cp -r .config ~/
 mv .zshrc ~/
 mv icons ~/.local/share
-mv .dircolors ~/
 sudo mv awesome.desktop /usr/share/xsessions/
 mv .xinitrc ~/
 gsettings set org.cinnamon.desktop.privacy remember-recent-files false
