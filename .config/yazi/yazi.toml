@@ -24,20 +24,24 @@ edit = [
 	{ run = "nvim %*",   block = true, for = "windows" },
 ]
 
+pdf = [
+    { run = 'zathura "$@"', orphan = true, desc = "zathura", for = "unix" },
+]
 play = [
-    { run = 'vlc "$@"', desc = "VLC", orphan = true }
+    { run = 'vlc "$@"', desc = "VLC", orphan = true },
 ]
 
 open = [
-	{ run = 'xdg-open "$@"', desc = "Open" },
-
-
-
+    { run = 'xdg-open "$@"', desc = "Open" },
 ]
+
 [open]
 rules = [
   { mime = "video/*", use = [ "play", "reveal" ] },
-{ name = "*", use = "edit" },
+  { mime = "application/zip", use = "extract" },
+  {mime = "application/pdf", use = ["pdf", "reveal"] },
+  {name = "*.pdf", use = "pdf" },
+  { mime = "text/*", use = [ "edit", "reveal" ] },
 ]
 
 
