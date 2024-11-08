@@ -92,9 +92,8 @@ local plugins =
 
 
 {'tpope/vim-sleuth'},
-{ 'Bilal2453/luvit-meta', lazy = true },
 {'ap/vim-css-color'},
-
+{'HiPhish/rainbow-delimiters.nvim'},
 
 
 
@@ -230,13 +229,6 @@ local plugins =
 
 
 
-{
-  "lervag/vimtex",
-  lazy = false,
-  init = function()
-      vim.g.vimtex_view_method = "zathura"
-  end
-},
 
 
 
@@ -276,9 +268,7 @@ local opts ={ }
 require("lazy").setup(plugins, opts)
 
 
-
 vim.o.inccommand = "split"
-
 
 
 
