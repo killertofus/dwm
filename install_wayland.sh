@@ -22,7 +22,7 @@ sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.m
 sudo apt update
 sudo -v
 sudo apt purge '*language-*' -y
-xargs sudo apt packages < packages.txt -y
+xargs sudo apt packages <packages.txt -y
 sudo mv update.sh /usr/local/bin
 fc-cache -f
 sudo systemctl enable libvirtd
@@ -90,5 +90,5 @@ sudo zig build packagessystemd
 sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
 cd -
-sudo xargs < remove_packages.txt -y && sudo apt update && sudo apt upgrade -y && sudo apt clean && sudo apt autoclean && sudo apt autoremove && sudo apt packages nemo -y
+sudo xargs <remove_packages.txt -y && sudo apt update && sudo apt upgrade -y && sudo apt clean && sudo apt autoclean && sudo apt autoremove && sudo apt packages nemo -y
 rm -rf $(pwd)
