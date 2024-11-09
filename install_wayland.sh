@@ -85,10 +85,9 @@ curl -s https://api.github.com/repos/streamlink/streamlink-twitch-gui/releases/l
 nvim > /dev/null 2>&1 &
 git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
-sudo zig build
 sudo zig build packagessystemd
 sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
 cd -
-sudo xargs < remove_packages.txt -y && sudo apt update && sudo apt upgrade -y && sudo apt clean && sudo apt autoclean && sudo apt autoremove && sudo apt install nemo -y
+xargs sudo apt purge < remove_packages.txt -y && sudo apt update && sudo apt upgrade -y && sudo apt clean && sudo apt autoclean && sudo apt autoremove && sudo apt install nemo -y
 rm -rf $(pwd)
