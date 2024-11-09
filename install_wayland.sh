@@ -22,7 +22,7 @@ sudo rm -rf /usr/share/fonts/Iosevka/Iosevka.tar.xz /usr/share/fonts/Iosevka/*.m
 sudo apt update
 sudo -v
 sudo apt purge '*language-*' -y
-xargs sudo apt packages <packages.txt -y
+xargs sudo apt install <packages.txt -y
 sudo mv update.sh /usr/local/bin
 fc-cache -f
 sudo systemctl enable libvirtd
