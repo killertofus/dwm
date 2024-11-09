@@ -40,7 +40,7 @@ main() {
 
 main
 sudo apt update
-sudo apt packages winehq-staging -y
+sudo apt install winehq-staging -y
 chsh -s $(which zsh)
 flatpak packages -y --noninteractive flathub com.chatterino.chatterino/x86_64/stable org.jellyfin.JellyfinServer JDownloader rustdesk
 sudo mv streamlink.desktop /usr/share/applications
@@ -65,7 +65,7 @@ wget https://ziglang.org/download/0.13.0/zig-linux-x86_64-0.13.0.tar.xz
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 tar xf lazygit.tar.gz lazygit
-sudo packages lazygit /usr/local/bin
+sudo install lazygit /usr/local/bin
 
 
 
