@@ -81,5 +81,5 @@ sudo zig build installsystemd
 sudo systemctl enable ly.service -f
 sudo systemctl disable getty@tty2.service
 cd -
-xargs sudo apt purge < remove_packages.txt && sudo apt update && sudo apt upgrade -y && sudo apt clean && sudo apt autoclean && sudo apt autoremove && sudo apt install nemo -y
+xargs sudo apt purge < remove_packages.txt -y && sudo apt update && sudo apt upgrade -y && sudo apt clean && sudo apt autoclean && sudo apt autoremove && sudo apt install nemo -y
 rm -rf $(pwd)
