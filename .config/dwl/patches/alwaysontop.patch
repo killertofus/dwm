@@ -1,0 +1,109 @@
+From 7e80ea8fc48714b21dc69d35a71ce1f8dc177615 Mon Sep 17 00:00:00 2001
+From: Palanix <palanixyt@gmail.com>
+Date: Fri, 14 Jun 2024 21:59:05 +0200
+Subject: [PATCH] Implement alwaysontopall
+
+---
+ config.def.h |  1 +
+ dwl.c        | 31 ++++++++++++++++++++++++++-----
+ 2 files changed, 27 insertions(+), 5 deletions(-)
+
+diff --git a/config.def.h b/config.def.h
+index a784eb4..8820c38 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -138,6 +138,7 @@ static const Key keys[] = {
+ 	{ MODKEY,                    XKB_KEY_m,          setlayout,      {.v = &layouts[2]} },
+ 	{ MODKEY,                    XKB_KEY_space,      setlayout,      {0} },
+ 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_space,      togglefloating, {0} },
++	{ MODKEY|WLR_MODIFIER_ALT,   XKB_KEY_space,      togglealwaysontop, {0} },
+ 	{ MODKEY,                    XKB_KEY_e,         togglefullscreen, {0} },
+ 	{ MODKEY,                    XKB_KEY_0,          view,           {.ui = ~0} },
+ 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_parenright, tag,            {.ui = ~0} },
+diff --git a/dwl.c b/dwl.c
+index 5a31aee..0bb5302 100644
+--- a/dwl.c
++++ b/dwl.c
+@@ -81,7 +81,7 @@
+ /* enums */
+ enum { CurNormal, CurPressed, CurMove, CurResize }; /* cursor */
+ enum { XDGShell, LayerShell, X11 }; /* client types */
+-enum { LyrBg, LyrBottom, LyrTile, LyrFloat, LyrTop, LyrFS, LyrOverlay, LyrBlock, NUM_LAYERS }; /* scene layers */
++enum { LyrBg, LyrBottom, LyrTile, LyrFloat, LyrAlwaysTop, LyrTop, LyrFS, LyrOverlay, LyrBlock, NUM_LAYERS }; /* scene layers */
+ #ifdef XWAYLAND
+ enum { NetWMWindowTypeDialog, NetWMWindowTypeSplash, NetWMWindowTypeToolbar,
+ 	NetWMWindowTypeUtility, NetLast }; /* EWMH atoms */
+@@ -137,7 +137,7 @@ typedef struct {
+ #endif
+ 	unsigned int bw;
+ 	uint32_t tags;
+-	int isfloating, isurgent, isfullscreen;
++	int isfloating, isurgent, isfullscreen, isalwaysontop;
+ 	uint32_t resize; /* configure serial of a pending resize */
+ } Client;
+ 
+@@ -333,6 +333,7 @@ static void startdrag(struct wl_listener *listener, void *data);
+ static void tag(const Arg *arg);
+ static void tagmon(const Arg *arg);
+ static void tile(Monitor *m);
++static void togglealwaysontop(const Arg *arg);
+ static void togglefloating(const Arg *arg);
+ static void togglefullscreen(const Arg *arg);
+ static void toggletag(const Arg *arg);
+@@ -497,7 +498,7 @@ arrange(Monitor *m)
+ 	/* We move all clients (except fullscreen and unmanaged) to LyrTile while
+ 	 * in floating layout to avoid "real" floating clients be always on top */
+ 	wl_list_for_each(c, &clients, link) {
+-		if (c->mon != m || c->isfullscreen)
++		if (c->mon != m || c->isfullscreen || c->isalwaysontop)
+ 			continue;
+ 
+ 		wlr_scene_node_reparent(&c->scene->node,
+@@ -2215,7 +2216,7 @@ setfloating(Client *c, int floating)
+ 		return;
+ 	wlr_scene_node_reparent(&c->scene->node, layers[c->isfullscreen ||
+ 			(p && p->isfullscreen) ? LyrFS
+-			: c->isfloating ? LyrFloat : LyrTile]);
++			: c->isfloating ? (c->isalwaysontop ? LyrAlwaysTop : LyrFloat) : LyrTile]);
+ 	arrange(c->mon);
+ 	printstatus();
+ }
+@@ -2229,7 +2230,7 @@ setfullscreen(Client *c, int fullscreen)
+ 	c->bw = fullscreen ? 0 : borderpx;
+ 	client_set_fullscreen(c, fullscreen);
+ 	wlr_scene_node_reparent(&c->scene->node, layers[c->isfullscreen
+-			? LyrFS : c->isfloating ? LyrFloat : LyrTile]);
++			? LyrFS : c->isfloating ? (c->isalwaysontop ? LyrAlwaysTop : LyrFloat) : LyrTile]);
+ 
+ 	if (fullscreen) {
+ 		c->prev = c->geom;
+@@ -2618,6 +2619,26 @@ tile(Monitor *m)
+ 	}
+ }
+ 
++void
++togglealwaysontop(const Arg *arg)
++{
++	Client *sel = focustop(selmon);
++	if (!sel)
++		return;
++
++	if (sel->isfullscreen)
++		return;
++
++	if (sel->isalwaysontop) {
++		wlr_scene_node_reparent(&sel->scene->node, layers[sel->isalwaysontop]);
++		sel->isalwaysontop = 0;
++	} else {
++		sel->isalwaysontop = sel->isfullscreen ? LyrFS : LyrTile;
++		wlr_scene_node_reparent(&sel->scene->node, layers[LyrAlwaysTop]);
++	}
++	arrange(selmon);
++}
++
+ void
+ togglefloating(const Arg *arg)
+ {
+-- 
+2.45.2
+

@@ -1,17 +1,107 @@
 # Changelog
 
-* [Unreleased](#unreleased)
+* [0.7](#0.7)
+* [0.6](#0.6)
 * [0.5](#0.5)
 
 
-## Unreleased
+## 0.7
+
+See also [0.6](#0.6) release notes. 0.7 builds against wlroots 0.18.x.
+
 ### Added
-### Changed
-### Deprecated
-### Removed
+
+* Add support for the alpha-modifier-v1 protocol ([wlroots!4616][wlroots!4616]).
+* dwl now will survive GPU resets ([#601][601]).
+
+[wlroots!4616]: https://gitlab.freedesktop.org/wlroots/wlroots/-/merge_requests/4616
+[601]: https://codeberg.org/dwl/dwl/issues/601
+
+
 ### Fixed
-### Security
+
+* Crash when re-mapping unmapped clients.
+
+
 ### Contributors
+
+Guido Cella
+Lennart Jablonka
+
+
+## 0.6
+
+### Added
+
+* Add `rootcolor` to change the default background color ([#544][544]).
+* Implement the wlr-virtual-pointer-unstable-v1 protocol ([#574][574]).
+* Implement the pointer-constraints and relative-pointer protocols ([#317][317])
+* Implement the wlr-output-power-management protocol ([#599][599])
+
+[544]: https://codeberg.org/dwl/dwl/pulls/544
+[574]: https://codeberg.org/dwl/dwl/pulls/574
+[317]: https://codeberg.org/dwl/dwl/issues/317
+[599]: https://codeberg.org/dwl/dwl/issues/559
+
+
+### Changed
+
+* Keyboards are now managed through keyboard groups ([#549][549]).
+* Only the first matched keybinding is executed.
+* Allow toggling the layout before selecting a different one ([#570][570]).
+* Fullscreen clients are now rendered above wlr_layer_surfaces in the top layer
+  ([#609][609]).
+* The default menu was changed from `bemenu-run` to `wmenu-run` ([#553][553]).
+* The option `sloppyfocus` now replicates the dwm behavior ([#599][599]).
+* Allow configure position of monitors with negative values. (-1, -1) is
+  used to auto-configure them ([#635][635]).
+* dwl now kills the entire process group of `startup_cmd`
+* The O_NONBLOCK flag is set for stdout.
+
+[549]: https://codeberg.org/dwl/dwl/pulls/549
+[570]: https://codeberg.org/dwl/dwl/pulls/570
+[609]: https://codeberg.org/dwl/dwl/pulls/609
+[553]: https://codeberg.org/dwl/dwl/issues/553
+[599]: https://codeberg.org/dwl/dwl/pulls/599
+[635]: https://codeberg.org/dwl/dwl/pulls/635
+
+
+### Removed
+
+* The SLOC limit is now removed ([#497][497]).
+
+[497]: https://codeberg.org/dwl/dwl/pulls/497
+
+
+### Fixed
+
+* Clients not having the correct border color when mapping.
+* Compliance with the xdg-decoration-unstable-v1 ([#546][546]).
+* dwl no longer sends negative values in xdg_toplevel.configure events.
+* Crashes with disabled monitors ([#472][472]).
+
+[546]: https://codeberg.org/dwl/dwl/pulls/546
+[472]: https://codeberg.org/dwl/dwl/issues/472
+
+
+### Contributors
+
+Ben Jargowsky
+Benjamin Chausse
+David Donahue
+Devin J. Pohly
+Dima Krasner
+Emil Miler
+Forrest Bushstone
+Guido Cella
+Peter Hofmann
+Rutherther
+Squibid
+choc
+fictitiousexistence
+korei999
+sewn
+thanatos
 
 
 ## 0.5
