@@ -2,7 +2,7 @@
 sed -i 's/dwm/dwl/g' configs.sh
 sed -i 's/xsessions/wayland-sessions/g' configs.sh
 sed -i 's/.xinitrc/startup.sh/g' configs.sh
-sed -i '23d;24d' configs.sh
+sed -i '21d;22d' configs.sh
 sed -i 's/picom/wdisplays/g' packages.txt
 sed -i 's/feh/wayland-protocols/g' packages.txt
 sed -i 's/xscreensaver/libwayland-cursor++1 liblz4-dev libwayland-bin libinput-dev libwayland-dev libwlroots-dev/g' packages.txt
