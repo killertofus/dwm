@@ -52,7 +52,7 @@ beautiful.init(gears.filesystem.get_configuration_dir() .. "theme/theme.lua")
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
 browser = "librewolf"
-filemanager = "caja"
+filemanager = "nemo"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
