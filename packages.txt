@@ -1,3 +1,4 @@
+7zip
 alacritty
 apt-transport-https
 awesome
